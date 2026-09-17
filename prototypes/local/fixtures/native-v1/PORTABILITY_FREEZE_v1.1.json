@@ -1,0 +1,7 @@
+{
+  "version": "1.1",
+  "files": {
+    "tests/check_png_pixels.py": "80332d6acb08559e301fd3e9b3f26cc383206b988e121999b69e431f36e8db92",
+    "fixtures/native-v1/PORTABILITY_CONTRACT_CLARIFICATION_v1.1.md": "2b5aea2ea01841a97f9c45255cc40bf425efbd766fc9e58f9ebbeba3ea3f8068"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "native-profile-revision-v1.schema.json",
+  "title": "Native profile revision record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "previous_profile_sha256",
+    "profile",
+    "reason"
+  ],
+  "properties": {
+    "previous_profile_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "Must byte-canonically match the current trusted worker CAPTURE_PROFILE literal. Runtime also requires a new ID/hash, current previous hash, idle queue and repair budget."
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    }
+  }
+}

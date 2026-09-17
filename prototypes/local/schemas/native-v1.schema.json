@@ -1,0 +1,910 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:reference-loop:native:v1",
+  "title": "Bounded trusted native adapter contract v1",
+  "description": "Structural schema plus mandatory runtime source/path/ownership/candidate/profile/budget checks in native_adapter. No arbitrary Python or external provider interface.",
+  "type": "object",
+  "$defs": {
+    "HashRef": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "Request": {
+      "type": "object",
+      "required": [
+        "id",
+        "operation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,90}$"
+        },
+        "operation": {
+          "enum": [
+            "version_v1",
+            "build_fixture_v1",
+            "edit_width_v1",
+            "inspect_v1",
+            "render_v1",
+            "build_arlette_v1",
+            "refine_arlette_v1",
+            "inspect_arlette_v1",
+            "render_arlette_v1"
+          ]
+        },
+        "input": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "bytes": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "expected_candidate": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_validation": {
+          "type": "boolean"
+        },
+        "isolation_profile": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "version_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "build_fixture_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "number",
+                    "minimum": 0.05,
+                    "maximum": 3
+                  },
+                  "depth": {
+                    "type": "number",
+                    "minimum": 0.05,
+                    "maximum": 3
+                  },
+                  "height": {
+                    "type": "number",
+                    "minimum": 0.05,
+                    "maximum": 3
+                  },
+                  "hold_seconds": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 60
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "edit_width_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "number",
+                    "minimum": 0.05,
+                    "maximum": 3
+                  },
+                  "hold_seconds": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 60
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "inspect_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "hold_seconds": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 60
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "render_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "preview_px": {
+                    "type": "integer",
+                    "minimum": 64,
+                    "maximum": 512
+                  },
+                  "views": {
+                    "type": "array",
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                      "enum": [
+                        "full",
+                        "detail",
+                        "alternate"
+                      ]
+                    }
+                  },
+                  "hold_seconds": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 60
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "build_arlette_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "height": {
+                    "type": "number",
+                    "minimum": 0.4,
+                    "maximum": 0.9
+                  },
+                  "width": {
+                    "type": "number",
+                    "minimum": 0.08,
+                    "maximum": 0.18
+                  },
+                  "projection": {
+                    "type": "number",
+                    "minimum": 0.11,
+                    "maximum": 0.24
+                  },
+                  "globe_diameter": {
+                    "type": "number",
+                    "minimum": 0.08,
+                    "maximum": 0.13
+                  },
+                  "globe_spacing": {
+                    "type": "number",
+                    "minimum": 0.15,
+                    "maximum": 0.25
+                  },
+                  "brass_roughness": {
+                    "type": "number",
+                    "minimum": 0.08,
+                    "maximum": 0.7
+                  },
+                  "acrylic_roughness": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 0.3
+                  },
+                  "groove_depth": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 0.002
+                  },
+                  "material_mode": {
+                    "enum": [
+                      "clay",
+                      "final"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "refine_arlette_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "height": {
+                    "type": "number",
+                    "minimum": 0.4,
+                    "maximum": 0.9
+                  },
+                  "width": {
+                    "type": "number",
+                    "minimum": 0.08,
+                    "maximum": 0.18
+                  },
+                  "projection": {
+                    "type": "number",
+                    "minimum": 0.11,
+                    "maximum": 0.24
+                  },
+                  "globe_diameter": {
+                    "type": "number",
+                    "minimum": 0.08,
+                    "maximum": 0.13
+                  },
+                  "globe_spacing": {
+                    "type": "number",
+                    "minimum": 0.15,
+                    "maximum": 0.25
+                  },
+                  "brass_roughness": {
+                    "type": "number",
+                    "minimum": 0.08,
+                    "maximum": 0.7
+                  },
+                  "acrylic_roughness": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 0.3
+                  },
+                  "groove_depth": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 0.002
+                  },
+                  "material_mode": {
+                    "enum": [
+                      "clay",
+                      "final"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "inspect_arlette_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "editability_render": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "const": "render_arlette_v1"
+              }
+            },
+            "required": [
+              "operation"
+            ]
+          },
+          "then": {
+            "properties": {
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "preview_px": {
+                    "type": "integer",
+                    "minimum": 64,
+                    "maximum": 1200
+                  },
+                  "views": {
+                    "type": "array",
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                      "enum": [
+                        "full",
+                        "detail",
+                        "alternate",
+                        "clay",
+                        "cage"
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "CyclePlan": {
+      "type": "object",
+      "required": [
+        "reason",
+        "direction"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method_change": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "Review": {
+      "type": "object",
+      "required": [
+        "id",
+        "reviewer_kind",
+        "candidate_sha256",
+        "bundle_id",
+        "plan_sha256",
+        "profile_sha256",
+        "criteria"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer_kind": {
+          "const": "supervised_independent"
+        },
+        "candidate_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bundle_id": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "plan_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "profile_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "criteria": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "A01",
+            "A02",
+            "A03",
+            "A04",
+            "A05",
+            "A06",
+            "A07",
+            "A08",
+            "A09",
+            "A10"
+          ],
+          "properties": {
+            "A01": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A02": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A03": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A04": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A05": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A06": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A07": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A08": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A09": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "A10": {
+              "type": "object",
+              "required": [
+                "status",
+                "evidence",
+                "reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "pass",
+                    "fail",
+                    "unknown"
+                  ]
+                },
+                "evidence": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Receipt": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "job_id",
+        "request_sha256",
+        "native_started",
+        "native_returncode",
+        "measured_native_seconds"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "native-receipt-v1"
+        },
+        "job_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,90}$"
+        },
+        "request_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "native_started": {
+          "type": "boolean"
+        },
+        "native_returncode": {
+          "type": "integer"
+        },
+        "measured_native_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "result": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

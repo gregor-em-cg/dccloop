@@ -1,0 +1,108 @@
+[
+  {
+    "expected": {
+      "actual_billed_usd": null,
+      "estimated_usd": 0.0087,
+      "uncached": 300
+    },
+    "id": "A01",
+    "input": {
+      "cached": 700,
+      "input": 1000,
+      "output": 100,
+      "rates": [
+        10,
+        1,
+        50
+      ],
+      "reasoning": 40,
+      "semantics": "cache_subset_reasoning_in_output"
+    },
+    "operation": "cost"
+  },
+  {
+    "expected": {
+      "complete": true,
+      "total": 85
+    },
+    "id": "A02-confirmed",
+    "input": {
+      "reset_indices": [
+        3
+      ],
+      "snapshots": [
+        100,
+        150,
+        150,
+        20,
+        35
+      ]
+    },
+    "operation": "cumulative"
+  },
+  {
+    "expected": {
+      "complete": false,
+      "total": null
+    },
+    "id": "A02-unknown",
+    "input": {
+      "reset_indices": [],
+      "snapshots": [
+        100,
+        150,
+        150,
+        20,
+        35
+      ]
+    },
+    "operation": "cumulative"
+  },
+  {
+    "expected": {
+      "active": 15,
+      "elapsed": 50,
+      "wait": 30,
+      "work": 20
+    },
+    "id": "A03",
+    "input": {
+      "active": [
+        [
+          0,
+          10
+        ],
+        [
+          5,
+          15
+        ]
+      ],
+      "end": 50,
+      "start": 0,
+      "wait": [
+        [
+          20,
+          50
+        ]
+      ]
+    },
+    "operation": "intervals"
+  },
+  {
+    "expected": {
+      "actual_billed_usd": null,
+      "estimated_usd": null,
+      "uncached": null
+    },
+    "id": "A04",
+    "input": {
+      "cached": 700,
+      "input": 1000,
+      "output": 100,
+      "rates": null,
+      "reasoning": 40,
+      "semantics": "unknown"
+    },
+    "operation": "cost"
+  }
+]

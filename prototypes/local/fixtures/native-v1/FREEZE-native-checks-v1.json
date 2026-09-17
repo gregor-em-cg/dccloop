@@ -1,0 +1,7 @@
+{
+  "frozen_utc": "2026-09-12T12:34:07.447146+00:00",
+  "files": {
+    "fixtures/native-v1/expectations-v1.json": "df00edc83ada0d97f4aaa50161c15b0763565d04992f83548f32a1343d7aedb0"
+  },
+  "expected_outcomes_written_before_harness_execution": true
+}

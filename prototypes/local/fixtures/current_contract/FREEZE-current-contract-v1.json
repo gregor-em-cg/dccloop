@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-09-12T12:18:56.561392+00:00",
+  "authority": "Expectations frozen before current acceptance test execution; no routing imports.",
+  "files": {
+    "fixtures/current_contract/current-contract-v1.json": "554f08684ae8687ace80f7153f4424227049b89b4431815ec03119f55eb7b6cf",
+    "fixtures/stage1_1/legacy-preconditions-v1.1.json": "a4aa506df439c53bb9c78525afec8917d204d366b84f532519c207579985e879",
+    "fixtures/synthetic/special-v1.json": "e6747dc817dff3e4e5269892b56909c68044a613c5c15db67b833bafaefd1fa9",
+    "fixtures/synthetic/scenarios-v1.json": "1a9fd7ad292ea79ae8b82145d5fb18569e745d085fbf54b81ed0b85814483587"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "files": {
+    "schemas/native-v1.schema.json": "19e8e2d5fe983192e7499e0e3c50d70be979960964a3c9e624238e5ed6237110",
+    "policies/native-limits-v1.json": "5e9a903208f3c4f27a5d3a7adb3bd39a56ae3d8379ca4b1b1623cfd86a6db3de"
+  }
+}

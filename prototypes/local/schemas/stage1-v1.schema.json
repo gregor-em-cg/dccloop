@@ -1,0 +1,612 @@
+{
+  "$defs": {
+    "Command": {
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "type": "object"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "intake",
+            "reserve",
+            "submit",
+            "start",
+            "complete",
+            "review_plan",
+            "repair",
+            "retry",
+            "reset",
+            "change_inputs",
+            "heartbeat",
+            "usage",
+            "reconcile",
+            "integrity",
+            "cancel",
+            "signoff",
+            "adjudicate"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "data"
+      ],
+      "type": "object"
+    },
+    "Counters": {
+      "additionalProperties": false,
+      "properties": {
+        "D": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "E": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "F": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "I": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "J": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "M": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "R": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "S": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "T": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "V": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "X": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "d": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "e": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "starts": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "R",
+        "D",
+        "d",
+        "I",
+        "V",
+        "T",
+        "F",
+        "E",
+        "e",
+        "X",
+        "S",
+        "M",
+        "J",
+        "starts"
+      ],
+      "type": "object"
+    },
+    "HashRef": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "type": "object"
+    },
+    "JobIntent": {
+      "additionalProperties": false,
+      "properties": {
+        "bundle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "candidate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "creative": {
+          "type": "boolean"
+        },
+        "job_id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "clay",
+            "material",
+            "audit",
+            "capture",
+            "review",
+            "portability",
+            "pack_native"
+          ]
+        },
+        "owner_epoch": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "profile": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "recipe": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "review_scope": {
+          "enum": [
+            "required",
+            "exploratory",
+            "none"
+          ]
+        },
+        "round": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "scope": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "job_id",
+        "kind",
+        "candidate",
+        "bundle",
+        "profile",
+        "scope",
+        "recipe",
+        "owner_epoch",
+        "round",
+        "review_scope",
+        "creative"
+      ],
+      "type": "object"
+    },
+    "Profile": {
+      "additionalProperties": false,
+      "properties": {
+        "applicability": {
+          "type": "object"
+        },
+        "criteria": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "profile_id": {
+          "type": "string"
+        },
+        "provenance_kind": {
+          "const": "synthetic_fixture"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "views": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "profile_id",
+        "provenance_kind",
+        "criteria",
+        "views",
+        "applicability",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    "Receipt": {
+      "additionalProperties": false,
+      "properties": {
+        "artifacts": {
+          "items": {
+            "$ref": "#/$defs/HashRef"
+          },
+          "type": "array"
+        },
+        "attempt": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "intent_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "job_id": {
+          "type": "string"
+        },
+        "launch_epoch": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "process": {
+          "type": "object"
+        },
+        "provenance_kind": {
+          "const": "synthetic_fixture"
+        },
+        "result": {
+          "type": "object"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "usage": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "schema_version",
+        "job_id",
+        "attempt",
+        "intent_sha256",
+        "launch_epoch",
+        "provenance_kind",
+        "result",
+        "artifacts",
+        "usage",
+        "process"
+      ],
+      "type": "object"
+    },
+    "Scenario": {
+      "additionalProperties": false,
+      "properties": {
+        "classification": {
+          "type": "string"
+        },
+        "expected": {
+          "type": "object"
+        },
+        "forbidden_calls": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "requirements": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "seed": {
+          "type": "object"
+        },
+        "steps": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "requirements",
+        "classification",
+        "seed",
+        "steps",
+        "expected",
+        "forbidden_calls",
+        "notes"
+      ],
+      "type": "object"
+    },
+    "State": {
+      "additionalProperties": false,
+      "properties": {
+        "approximations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "artifact_refs": {
+          "items": {
+            "$ref": "#/$defs/HashRef"
+          },
+          "type": "array"
+        },
+        "best": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "brief_ready": {
+          "type": "boolean"
+        },
+        "bundle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "call_log": {
+          "type": "array"
+        },
+        "candidate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "config": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "counts": {
+          "$ref": "#/$defs/Counters"
+        },
+        "decisions": {
+          "type": "array"
+        },
+        "execution_mode": {
+          "const": "mock"
+        },
+        "gate": {
+          "enum": [
+            "G0",
+            "G1",
+            "G2",
+            "G3",
+            "G4",
+            "G5"
+          ]
+        },
+        "gates": {
+          "type": "object"
+        },
+        "history": {
+          "type": "object"
+        },
+        "jobs": {
+          "type": "object"
+        },
+        "last_result": {
+          "type": "string"
+        },
+        "limits": {
+          "type": "object"
+        },
+        "mode": {
+          "enum": [
+            "initial",
+            "refinement",
+            "import"
+          ]
+        },
+        "next": {
+          "type": "string"
+        },
+        "owner_epoch": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "package": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "policy_version": {
+          "type": "string"
+        },
+        "previous_failures": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "profile": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "provenance_kind": {
+          "const": "synthetic_fixture"
+        },
+        "quarantine": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "regression_keys": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "rejected_methods": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "reservations": {
+          "type": "object"
+        },
+        "reset_blockers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "review_plan": {
+          "type": "object"
+        },
+        "reviews": {
+          "type": "object"
+        },
+        "revision": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "round_closed": {
+          "type": "boolean"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "scope": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "signoff": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "running",
+            "blocked",
+            "needs_evidence",
+            "method_reset",
+            "budget_exhausted",
+            "failed",
+            "cancelled",
+            "awaiting_human_review",
+            "mock_approved"
+          ]
+        },
+        "unknown_usage": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "usage": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "schema_version",
+        "run_id",
+        "execution_mode",
+        "provenance_kind",
+        "revision",
+        "owner_epoch",
+        "policy_version",
+        "status",
+        "gate",
+        "reason",
+        "next",
+        "mode",
+        "candidate",
+        "best",
+        "bundle",
+        "package",
+        "profile",
+        "scope",
+        "config",
+        "brief_ready",
+        "approximations",
+        "history",
+        "gates",
+        "round_closed",
+        "counts",
+        "limits",
+        "usage",
+        "reservations",
+        "jobs",
+        "review_plan",
+        "reviews",
+        "previous_failures",
+        "reset_blockers",
+        "rejected_methods",
+        "quarantine",
+        "regression_keys",
+        "decisions",
+        "signoff",
+        "call_log",
+        "unknown_usage",
+        "artifact_refs",
+        "last_result"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "urn:reference-loop:stage1:v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

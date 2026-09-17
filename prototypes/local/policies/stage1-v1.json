@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "policy_id": "stage1-v1",
+  "provenance_kind": "synthetic_fixture",
+  "execution_mode": "mock",
+  "limits": {
+    "rounds": 10,
+    "drafts_per_round": 2,
+    "retries_per_job": 1,
+    "retries_global": 4,
+    "evidence_per_round": 1,
+    "evidence_global": 3,
+    "resets_per_blocker": 1,
+    "resets_global": 3,
+    "review_starts": 20,
+    "jobs": 60,
+    "tokens": 1000000,
+    "active_seconds": 3600,
+    "simulated_usd": 100,
+    "finalization_usd": 10,
+    "job_timeout_seconds": 60
+  },
+  "reservation_per_attempt": {"tokens": 1000, "active_seconds": 10, "simulated_usd": 1},
+  "future_review_reserve": {"jobs": 1, "tokens": 1000, "active_seconds": 10, "simulated_usd": 1},
+  "stall_reviews": 2,
+  "native_rewrite": {"new_round": true, "evidence_repair": true, "creative_draft_only_if_declared": true},
+  "approval_label": "mock_approved",
+  "external_execution_allowed": false
+}

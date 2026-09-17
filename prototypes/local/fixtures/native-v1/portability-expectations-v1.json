@@ -1,0 +1,37 @@
+{
+  "schema": "native-portability-expectations-v1",
+  "scope": "disposable primitive package, actual CLI/native processes",
+  "cases": {
+    "original_path_denied": {
+      "unrestricted_rc": 0,
+      "restricted_nonzero": true
+    },
+    "missing_external_image": {
+      "native_started": true,
+      "native_nonzero": true,
+      "candidate_preserved": true
+    },
+    "restored_isolated_reopen": {
+      "native_rc": 0,
+      "autoexec_enabled": false,
+      "editability_width_changed": true,
+      "editability_width_restored": true
+    },
+    "render_reproduction": {
+      "views": [
+        "full",
+        "detail",
+        "alternate"
+      ],
+      "resolution": [
+        256,
+        256
+      ],
+      "criterion": "identical PNG bytes for fixed seed/settings; differences fail"
+    },
+    "archive_integrity": {
+      "same_candidate_bytes": true,
+      "same_asset_bytes": true
+    }
+  }
+}

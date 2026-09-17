@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-09-12T02:57:24.131267+00:00",
+  "files": {
+    "fixtures/stage1_1/scenarios-v1.1.json": "c3ee3e13d077b76cdfd2d3ce1c4b2aef5dd76cab8530f1b68f6d1ddee2fa446e",
+    "fixtures/stage1_1/process-v1.1.json": "7c9ad2665c0bc2fa5e3ebcb74edd2dee77eb92d4e238aa6d5b9cc84f8b4e5b8c",
+    "fixtures/stage1_1/legacy-preconditions-v1.1.json": "a4aa506df439c53bb9c78525afec8917d204d366b84f532519c207579985e879",
+    "fixtures/author_stage11.py": "bdd28eb53afd253696daeee0aef2fac0280b3951deb08e2c40df0d293f711bd1"
+  },
+  "oracle_source": "Authored from user invariants and independent review, never policy output."
+}

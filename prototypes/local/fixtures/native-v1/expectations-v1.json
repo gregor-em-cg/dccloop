@@ -1,0 +1,250 @@
+{
+  "version": "native-checks-v1",
+  "authority": "User approved Next Brief native fixture bring-up. Disposable primitive only; not a selected product.",
+  "authored_utc": "2026-09-12T12:34:07.446739+00:00",
+  "limits": {
+    "max_total_fixture_attempts": 20,
+    "max_total_native_seconds": 1800,
+    "max_process_seconds": 120,
+    "max_preview_pixels": 512,
+    "planned_new_native_attempts": 9,
+    "concurrent_native_processes": 1
+  },
+  "execution": "No launch during expectation authoring. Templates are bound to measured candidate/asset hashes at execution; expected dimensions and guard outcomes remain these independent constants.",
+  "technical": {
+    "depth": 0.6,
+    "height": 1.0,
+    "body_name": "DEFECTIVE_PRIMITIVE_body",
+    "base_name": "Fixture_base",
+    "base_dimensions": [
+      0.38,
+      0.3,
+      0.06
+    ],
+    "tolerance": 1e-05,
+    "driver_count_min": 1,
+    "autoexec_enabled": false,
+    "background": true,
+    "editability": {
+      "tested": true,
+      "width_changed": true,
+      "width_restored": true,
+      "saved_perturbation": false
+    },
+    "image_dimensions": [
+      256,
+      256
+    ],
+    "expected_views": [
+      "full",
+      "detail",
+      "alternate"
+    ],
+    "expected_provenance": "actual_native_fixture",
+    "human_approval": null
+  },
+  "steps": [
+    {
+      "id": "N01-version",
+      "kind": "capability",
+      "operation": "version_v1",
+      "expected_provenance": "actual_native_capability"
+    },
+    {
+      "id": "N02-build",
+      "kind": "build",
+      "request": {
+        "operation": "build_fixture_v1",
+        "parameters": {
+          "width": 0.8,
+          "depth": 0.6,
+          "height": 1
+        }
+      },
+      "expected_width": 0.8
+    },
+    {
+      "id": "N03-readback-A",
+      "kind": "inspect",
+      "source": "A",
+      "request": {
+        "operation": "inspect_v1",
+        "parameters": {}
+      },
+      "expected_width": 0.8
+    },
+    {
+      "id": "N04-render-A",
+      "kind": "render",
+      "source": "A",
+      "request": {
+        "operation": "render_v1",
+        "parameters": {
+          "preview_px": 256,
+          "views": [
+            "full",
+            "detail",
+            "alternate"
+          ]
+        }
+      },
+      "expected_width": 0.8
+    },
+    {
+      "id": "N05-edit-width",
+      "kind": "edit",
+      "source": "A",
+      "request": {
+        "operation": "edit_width_v1",
+        "parameters": {
+          "width": 1.2
+        }
+      },
+      "expected_width": 1.2
+    },
+    {
+      "id": "N06-readback-B",
+      "kind": "inspect",
+      "source": "B",
+      "request": {
+        "operation": "inspect_v1",
+        "parameters": {}
+      },
+      "expected_width": 1.2
+    },
+    {
+      "id": "N07-render-B",
+      "kind": "render",
+      "source": "B",
+      "request": {
+        "operation": "render_v1",
+        "parameters": {
+          "preview_px": 256,
+          "views": [
+            "full",
+            "detail",
+            "alternate"
+          ]
+        }
+      },
+      "expected_width": 1.2
+    },
+    {
+      "id": "N08-interruption-recovery",
+      "kind": "interrupted_recovery",
+      "source": "B",
+      "request": {
+        "operation": "inspect_v1",
+        "parameters": {
+          "hold_seconds": 2
+        }
+      },
+      "expected_width": 1.2,
+      "interruption_exit": 74
+    },
+    {
+      "id": "N09-live-cancel",
+      "kind": "live_cancel",
+      "request": {
+        "operation": "build_fixture_v1",
+        "parameters": {
+          "width": 0.8,
+          "depth": 0.6,
+          "height": 1,
+          "hold_seconds": 30
+        }
+      },
+      "expected_status": "cancelled",
+      "expected_candidate": null,
+      "expected_adoptions": 1
+    },
+    {
+      "id": "N10-receipt-before-cancel",
+      "kind": "late_cancel",
+      "request": {
+        "operation": "build_fixture_v1",
+        "parameters": {
+          "width": 0.8,
+          "depth": 0.6,
+          "height": 1,
+          "hold_seconds": 2
+        }
+      },
+      "expected_status": "cancelled",
+      "expected_candidate": null,
+      "expected_adoptions": 1,
+      "interruption_exit": 74
+    },
+    {
+      "id": "N11-unsupported",
+      "kind": "reject",
+      "request": {
+        "operation": "unsupported_v1",
+        "parameters": {}
+      },
+      "error_contains": "unsupported"
+    },
+    {
+      "id": "N12-unsafe-output-id",
+      "kind": "reject",
+      "request_id": "../escaped-output",
+      "request": {
+        "operation": "build_fixture_v1",
+        "parameters": {}
+      },
+      "error_contains": "unsafe"
+    },
+    {
+      "id": "N13-stale-candidate",
+      "kind": "reject",
+      "source": "A",
+      "request": {
+        "operation": "inspect_v1",
+        "parameters": {}
+      },
+      "error_contains": "stale"
+    },
+    {
+      "id": "N14-preview-over-limit",
+      "kind": "reject",
+      "source": "B",
+      "request": {
+        "operation": "render_v1",
+        "parameters": {
+          "preview_px": 513,
+          "views": [
+            "full"
+          ]
+        }
+      },
+      "error_contains": "preview"
+    },
+    {
+      "id": "N15-invalid-run-output",
+      "kind": "reject_run",
+      "error_contains": "run output"
+    },
+    {
+      "id": "N16-synthetic-receipt",
+      "kind": "synthetic_receipt",
+      "source": "B",
+      "request": {
+        "operation": "inspect_v1",
+        "parameters": {}
+      },
+      "error_contains": "synthetic"
+    }
+  ],
+  "deferred_to_separate_root_tests": [
+    "deliberately missing dependency and restored success",
+    "isolated extracted native portability with original source path denial"
+  ],
+  "non_native_cases": [
+    "N11-unsupported",
+    "N12-unsafe-output-id",
+    "N13-stale-candidate",
+    "N14-preview-over-limit",
+    "N15-invalid-run-output",
+    "N16-synthetic-receipt"
+  ]
+}

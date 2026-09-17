@@ -1,0 +1,26 @@
+{
+  "applicability": {
+    "manifold": "NA"
+  },
+  "criteria": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8"
+  ],
+  "limitations": [
+    "No CG calibration; all verdicts supplied by fixtures."
+  ],
+  "profile_id": "synthetic-eight-v1",
+  "provenance_kind": "synthetic_fixture",
+  "schema_version": 1,
+  "views": [
+    "full",
+    "detail",
+    "alternate"
+  ]
+}

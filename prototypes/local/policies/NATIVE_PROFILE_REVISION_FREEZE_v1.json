@@ -1,0 +1,7 @@
+{
+  "schema_version": "native-profile-revision-v1",
+  "sha256": "947fc2adeb7aaa71a490fc38b06023833bee4e5f38c022a1bb0dbf3c70500b4e",
+  "path": "schemas/native-profile-revision-v1.schema.json",
+  "authority": "Documents existing explicit profile-repair allowance; no acceptance criteria revised",
+  "historical_schema_unchanged": "schemas/native-v1.schema.json"
+}

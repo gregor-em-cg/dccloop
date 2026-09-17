@@ -1,0 +1,199 @@
+{
+  "mutations": [
+    {
+      "case": "R13-corrupt",
+      "id": "disable_hash_checks"
+    },
+    {
+      "case": "T13",
+      "id": "decrement_rounds_reset"
+    },
+    {
+      "case": "R11",
+      "id": "duplicate_adoption"
+    },
+    {
+      "case": "A01",
+      "id": "double_cache"
+    },
+    {
+      "case": "A08",
+      "id": "always_block"
+    }
+  ],
+  "paths": [
+    {
+      "expected": "reject",
+      "id": "A06-traversal",
+      "path": "../escape"
+    },
+    {
+      "expected": "reject",
+      "id": "A06-absolute",
+      "path": "/tmp/escape"
+    },
+    {
+      "existing": "findings.md",
+      "expected": "reject",
+      "id": "A06-casefold",
+      "path": "FINDINGS.md"
+    },
+    {
+      "expected": "reject",
+      "id": "A06-symlink",
+      "path": "link/out"
+    },
+    {
+      "expected": "allow",
+      "id": "A06-valid",
+      "path": "private/output.txt"
+    }
+  ],
+  "process_cases": [
+    {
+      "expected": {
+        "adoptions": 1,
+        "events_atomic": true,
+        "starts": 1
+      },
+      "fault": "before_intent_commit",
+      "id": "P01",
+      "requirements": [
+        "R01",
+        "R07"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "starts": 1
+      },
+      "fault": "after_intent",
+      "id": "P02",
+      "requirements": [
+        "R02"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "starts": 1,
+        "transfers": 1
+      },
+      "fault": "after_launch",
+      "id": "P03",
+      "requirements": [
+        "R03",
+        "C1"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "starts": 1
+      },
+      "fault": "after_staging",
+      "id": "P04",
+      "requirements": [
+        "R05",
+        "R10"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "starts": 1
+      },
+      "fault": "after_commit",
+      "id": "P05",
+      "requirements": [
+        "R06",
+        "R11",
+        "R17"
+      ]
+    },
+    {
+      "expected": {
+        "F": 1,
+        "T": 1,
+        "adoptions": 1,
+        "starts": 2
+      },
+      "fault": "kill_worker_partial",
+      "id": "P06",
+      "requirements": [
+        "R04"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "starts": 1
+      },
+      "fault": "competing_controllers",
+      "id": "P07",
+      "requirements": [
+        "R15"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 0,
+        "starts": 1,
+        "status": "cancelled"
+      },
+      "fault": "cancel_worker",
+      "id": "P08",
+      "requirements": [
+        "R16"
+      ]
+    },
+    {
+      "expected": {
+        "reason": "integrity",
+        "status": "blocked"
+      },
+      "fault": "corrupt_committed_artifact",
+      "id": "P09",
+      "requirements": [
+        "R13"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "old_owner_rejected": true,
+        "starts": 1
+      },
+      "fault": "old_owner_commit",
+      "id": "P10",
+      "requirements": [
+        "C1",
+        "R12"
+      ]
+    },
+    {
+      "expected": {
+        "status": "blocked",
+        "unrelated_alive": true
+      },
+      "fault": "process_identity_mismatch",
+      "id": "P11",
+      "requirements": [
+        "R14"
+      ]
+    },
+    {
+      "expected": {
+        "adoptions": 1,
+        "conflict_rejected": true,
+        "starts": 1
+      },
+      "fault": "CAS_conflict",
+      "id": "P12",
+      "requirements": [
+        "C1"
+      ]
+    }
+  ]
+}

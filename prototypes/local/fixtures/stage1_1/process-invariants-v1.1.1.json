@@ -1,0 +1,21 @@
+{
+  "reason": "Additional assertion after trace inspection found stale reconciliation reopening committed jobs. Original v1.1 inputs and expected outcomes remain unchanged. Freeze this check before the terminal-job guard fix.",
+  "cases": {
+    "P11-cancel-live-restart": {
+      "resume-completed": {
+        "jobs.review-live.status": "committed"
+      },
+      "resume-duplicate": {
+        "jobs.review-live.status": "committed"
+      }
+    },
+    "P11-noncancel-restart": {
+      "resume-completed": {
+        "jobs.review-live.status": "committed"
+      },
+      "resume-duplicate": {
+        "jobs.review-live.status": "committed"
+      }
+    }
+  }
+}

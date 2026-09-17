@@ -1,0 +1,30 @@
+{
+  "controller_existed_at_freeze": false,
+  "expectations_source": "Human-authored TEST_PLAN plus user addendum; no router import or execution.",
+  "files": {
+    "ROADMAP_ADDENDUM_v1.md": "1813d6a478be35188dea9611f3bf0bfbe51fa61d6ff733a966054154b08c854a",
+    "STAGE_1_POLICY_ADDENDUM_v1.md": "bec5517c7674b7fa3a1cd43dfa6535150b9ceacfbcfefb4d5b4ed4c22dbbf061",
+    "fixtures/author_spec_v1.py": "c847e48a2b59fe640fe97f3b1e627332516e90efef65e6e37ba8702b3c497e93",
+    "fixtures/synthetic/accounting-v1.json": "f8f6e9ae7ea928aa83bc263567f9b28717e0d8681aac6fee6d6106f6b1ffde91",
+    "fixtures/synthetic/artifacts.json": "55d62402cec818ebc19d574d4b231acef3b86e12e93328a092a0787a11b9ab74",
+    "fixtures/synthetic/bundle-a.txt": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+    "fixtures/synthetic/bundle-b.txt": "b9778ac2150818914c22e573253e3cf11b63e145cdea59e076152d72577b9053",
+    "fixtures/synthetic/candidate-a.txt": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+    "fixtures/synthetic/candidate-b.txt": "9ce08f7a08864696c20b3a2be33deb9e9ed6af49d004b199e7c35bbc220ba4c3",
+    "fixtures/synthetic/clay.txt": "871bbfd2b29310f02a71c3391f6ff2a113a4f8ccda1fc1ea55b7cc4da6047183",
+    "fixtures/synthetic/config.txt": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+    "fixtures/synthetic/coverage-v1.json": "1ce6fd17b580853f3ad12d6e13b8b0d03b196b68df7453efbaba27214513787a",
+    "fixtures/synthetic/other-recipe.txt": "b9bc2f75305ad89a21b312e5435182ed5a83b74ba582d2bb003698d2fc2f50f4",
+    "fixtures/synthetic/package.txt": "67a7b25879b3550beb0b164a1debd446074a1c31096d03aa723c4f9e3ab59f4d",
+    "fixtures/synthetic/profile.json": "19b533c84f9ce7a2f5307f9e52d36e94681c17ef7c9ab3412828a02678afdce4",
+    "fixtures/synthetic/profile.txt": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+    "fixtures/synthetic/recipe.txt": "3b7730cb933eee0f709fb372d2cec049b2826c0681335702e8ef3d9bb4462de9",
+    "fixtures/synthetic/scenarios-v1.json": "1a9fd7ad292ea79ae8b82145d5fb18569e745d085fbf54b81ed0b85814483587",
+    "fixtures/synthetic/scope.txt": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+    "fixtures/synthetic/special-v1.json": "e6747dc817dff3e4e5269892b56909c68044a613c5c15db67b833bafaefd1fa9",
+    "policies/stage1-v1.json": "896ea0b43c058ddaee8e25818c8d9c17e5af956012d832e64a20eeb50f0cbd30",
+    "schemas/stage1-v1.schema.json": "ebf187600e3f5f71c11bb022e482e4392a563f239e0e10d139ec9553aa93b7a4"
+  },
+  "frozen_utc": "2026-09-12T00:59:29.571264+00:00",
+  "version": "v1"
+}

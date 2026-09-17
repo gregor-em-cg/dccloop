@@ -1,0 +1,25 @@
+{
+  "fixture": {
+    "attempts": 20,
+    "total_seconds": 1800,
+    "timeout_seconds": 120,
+    "max_pixels": 512,
+    "final_attempt_reserve": 0,
+    "final_seconds_reserve": 0
+  },
+  "product": {
+    "attempts": 30,
+    "total_seconds": 5400,
+    "timeout_seconds": 600,
+    "max_pixels": 1200,
+    "final_attempt_reserve": 5,
+    "final_seconds_reserve": 1200,
+    "cycles": 3,
+    "drafts_per_cycle": 2,
+    "identical_retries_per_job": 1,
+    "retries_global": 4,
+    "evidence_repairs": 3,
+    "absolute_cycles": 10,
+    "stall_reset": 2
+  }
+}

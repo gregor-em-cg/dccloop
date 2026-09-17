@@ -1,0 +1,45 @@
+{
+  "verified_utc": "2026-09-17T02:15:50.050930+00:00",
+  "scope": "Public-source preparation; not a universal security audit or native validation",
+  "staged_files_before_this_report": 97,
+  "staged_bytes_before_this_report": 913467,
+  "binary_files": 0,
+  "case_collisions": [],
+  "targeted_sensitive_pattern_findings": [],
+  "original_source_files_rechecked_unchanged": 75,
+  "current_source_copy_hashes_verified": 75,
+  "core_citations_checked_for_file_and_line": 52,
+  "local_markdown_links_checked": 17,
+  "frozen_input_controls": {
+    "valid": "pass",
+    "same_size_corruption": "rejected",
+    "missing_file": "rejected",
+    "restored": "pass"
+  },
+  "frozen_input_result": {
+    "passed": true,
+    "manifest_count": 12,
+    "hash_checks": 84,
+    "failures": [],
+    "scope": "Preservation only; not execution or quality acceptance"
+  },
+  "preparation_failures_retained": [
+    {
+      "event": "Initial packaging-only frozen-input checker rejected two existing single-file manifest formats with KeyError.",
+      "resolution": "Checker now explicitly handles both preserved manifest representations; no expected hash or runtime oracle changed to fix this error."
+    }
+  ],
+  "exclusions": [
+    "Customer/reference photographs and material-library assets",
+    "Native model binaries and delivery ZIPs",
+    "Original run databases and ledgers",
+    "Raw process/session/accounting logs",
+    "Credentials and local account configuration"
+  ],
+  "incidental_changes": [
+    "Temporary read-only audit search file created outside project then removed; absence verified.",
+    "Git author configured only in this new repository using public GitHub handle and noreply email."
+  ],
+  "native_applications_executed": false,
+  "model_providers_called": false
+}

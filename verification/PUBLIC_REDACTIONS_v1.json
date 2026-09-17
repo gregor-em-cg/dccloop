@@ -1,0 +1,413 @@
+{
+  "schema_version": "public-redactions/1",
+  "created_utc": "2026-09-17T02:11:30.661737+00:00",
+  "purpose": "Remove personal absolute-path provenance citations from public copies while retaining original hashes/manifests and preserving executable behavior/expected outcomes.",
+  "changes": [
+    {
+      "source": "Blender_Adapter_Bringup_v0.1/ROADMAP_ADDENDUM_v1.md",
+      "destination": "prototypes/local/ROADMAP_ADDENDUM_v1.md",
+      "classification": "public_provenance_citation_redaction",
+      "source_sha256": "1813d6a478be35188dea9611f3bf0bfbe51fa61d6ff733a966054154b08c854a",
+      "public_sha256": "2544db3c44096479ba8fb01944ca813280b078e667ca03308f96fd2488fd976a",
+      "source_bytes": 1270,
+      "public_bytes": 1267,
+      "text_changes": [
+        {
+          "line": 3,
+          "occurrences": 1,
+          "replacement": "[historical source withheld: Stage_1_Implementation_Review_Addendum.md:84]",
+          "private_component": "Account name and absolute home-directory prefix omitted from this change record as well.",
+          "original_citation_shape": "[repo <withheld absolute user Downloads directory>/Stage_1_Implementation_Review_Addendum.md:84]"
+        }
+      ],
+      "policy_prose_unchanged": true
+    },
+    {
+      "source": "Blender_Adapter_Bringup_v0.1/STAGE_1_POLICY_ADDENDUM_v1.md",
+      "destination": "prototypes/local/STAGE_1_POLICY_ADDENDUM_v1.md",
+      "classification": "public_provenance_citation_redaction",
+      "source_sha256": "bec5517c7674b7fa3a1cd43dfa6535150b9ceacfbcfefb4d5b4ed4c22dbbf061",
+      "public_sha256": "cf6a043e7df3031ceeae21479faffb316b741a77bf7a8ed3eb9444cef5a5d15c",
+      "source_bytes": 5097,
+      "public_bytes": 5094,
+      "text_changes": [
+        {
+          "line": 3,
+          "occurrences": 1,
+          "replacement": "[historical source withheld: Stage_1_Implementation_Review_Addendum.md:5]",
+          "private_component": "Account name and absolute home-directory prefix omitted from this change record as well.",
+          "original_citation_shape": "[repo <withheld absolute user Downloads directory>/Stage_1_Implementation_Review_Addendum.md:5]"
+        }
+      ],
+      "policy_prose_unchanged": true
+    },
+    {
+      "source": "Blender_Adapter_Bringup_v0.1/fixtures/synthetic/FREEZE-v1.json",
+      "destination": "prototypes/local/fixtures/synthetic/FREEZE-v1.json",
+      "classification": "public_document_hash_metadata_update",
+      "source_sha256": "8f2c8467ed37b869fa7a0a342be1d6c2b3abcf86d50d4569c23778a7ae82b3fc",
+      "public_sha256": "90b7dc1d1a41a9d5117cdfe48613e2dafdf84f37e9bb897d8e7f7ec0169e178d",
+      "source_bytes": 2581,
+      "public_bytes": 2970,
+      "json_value_changes": {
+        "files.ROADMAP_ADDENDUM_v1.md": {
+          "original": "1813d6a478be35188dea9611f3bf0bfbe51fa61d6ff733a966054154b08c854a",
+          "public": "2544db3c44096479ba8fb01944ca813280b078e667ca03308f96fd2488fd976a"
+        },
+        "files.STAGE_1_POLICY_ADDENDUM_v1.md": {
+          "original": "bec5517c7674b7fa3a1cd43dfa6535150b9ceacfbcfefb4d5b4ed4c22dbbf061",
+          "public": "cf6a043e7df3031ceeae21479faffb316b741a77bf7a8ed3eb9444cef5a5d15c"
+        }
+      },
+      "added_metadata": {
+        "public_edition": {
+          "version": "public-provenance-redaction/1",
+          "original_manifest_sha256": "8f2c8467ed37b869fa7a0a342be1d6c2b3abcf86d50d4569c23778a7ae82b3fc",
+          "reason": "Two historical policy-document provenance citations redact personal paths; no executable policy, scenario or expected outcome changes.",
+          "change_record": "verification/PUBLIC_REDACTIONS_v1.json"
+        }
+      },
+      "other_original_keys_and_values_unchanged": true
+    },
+    {
+      "source": "Blender_Adapter_Bringup_v0.1/reports/current-contract/BASELINE-HASHES.json",
+      "destination": "prototypes/local/reports/current-contract/BASELINE-HASHES.json",
+      "classification": "public_freeze_hash_metadata_update",
+      "source_sha256": "9552f6b568dc00d33fe388426b68a29f657750926a4614958c8f2dd4bef82058",
+      "public_sha256": "3c2e9714f4f75052910dacf61154386301f6bcef61a2a00f7fd8c05e5453aa4d",
+      "source_bytes": 4775,
+      "public_bytes": 5170,
+      "json_value_changes": {
+        "files.fixtures/synthetic/FREEZE-v1.json": {
+          "original": "8f2c8467ed37b869fa7a0a342be1d6c2b3abcf86d50d4569c23778a7ae82b3fc",
+          "public": "90b7dc1d1a41a9d5117cdfe48613e2dafdf84f37e9bb897d8e7f7ec0169e178d"
+        }
+      },
+      "added_metadata": {
+        "public_edition": {
+          "version": "public-provenance-redaction/1",
+          "original_manifest_sha256": "9552f6b568dc00d33fe388426b68a29f657750926a4614958c8f2dd4bef82058",
+          "reason": "Only the public synthetic freeze-manifest hash changes to bind documented citation redactions; 43 other baseline file digests are unchanged.",
+          "change_record": "verification/PUBLIC_REDACTIONS_v1.json"
+        }
+      },
+      "other_original_keys_and_values_unchanged": true
+    }
+  ],
+  "preserved_original_manifests": [
+    {
+      "source": "Blender_Adapter_Bringup_v0.1/fixtures/synthetic/FREEZE-v1.json",
+      "destination": "verification/history/fixtures/synthetic/FREEZE-v1.json",
+      "sha256": "8f2c8467ed37b869fa7a0a342be1d6c2b3abcf86d50d4569c23778a7ae82b3fc",
+      "bytes": 2581,
+      "byte_identical": true
+    },
+    {
+      "source": "Blender_Adapter_Bringup_v0.1/reports/current-contract/BASELINE-HASHES.json",
+      "destination": "verification/history/reports/current-contract/BASELINE-HASHES.json",
+      "sha256": "9552f6b568dc00d33fe388426b68a29f657750926a4614958c8f2dd4bef82058",
+      "bytes": 4775,
+      "byte_identical": true
+    }
+  ],
+  "verification": {
+    "allowed_changed_source_files": 4,
+    "unchanged_copied_files": 71,
+    "source_originals_unchanged": true,
+    "all_source_and_destination_hashes_checked": true,
+    "public_freeze_reference_count": 40,
+    "public_freeze_references_all_match": true,
+    "public_baseline_files": 44,
+    "public_baseline_all_match": true,
+    "structural_json_allowlist_check": "Only the two document digest values plus public_edition metadata changed in the synthetic freeze; only that freeze digest plus public_edition metadata changed in the baseline manifest.",
+    "code_harnesses_scenarios_schemas_and_executable_policy_json_byte_identical": true,
+    "tests_run": false,
+    "freeze_reference_results": [
+      {
+        "manifest": "fixtures/current_contract/FREEZE-current-contract-v1.json",
+        "path": "fixtures/current_contract/current-contract-v1.json",
+        "expected_sha256": "554f08684ae8687ace80f7153f4424227049b89b4431815ec03119f55eb7b6cf",
+        "actual_sha256": "554f08684ae8687ace80f7153f4424227049b89b4431815ec03119f55eb7b6cf",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/current_contract/FREEZE-current-contract-v1.json",
+        "path": "fixtures/stage1_1/legacy-preconditions-v1.1.json",
+        "expected_sha256": "a4aa506df439c53bb9c78525afec8917d204d366b84f532519c207579985e879",
+        "actual_sha256": "a4aa506df439c53bb9c78525afec8917d204d366b84f532519c207579985e879",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/current_contract/FREEZE-current-contract-v1.json",
+        "path": "fixtures/synthetic/special-v1.json",
+        "expected_sha256": "e6747dc817dff3e4e5269892b56909c68044a613c5c15db67b833bafaefd1fa9",
+        "actual_sha256": "e6747dc817dff3e4e5269892b56909c68044a613c5c15db67b833bafaefd1fa9",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/current_contract/FREEZE-current-contract-v1.json",
+        "path": "fixtures/synthetic/scenarios-v1.json",
+        "expected_sha256": "1a9fd7ad292ea79ae8b82145d5fb18569e745d085fbf54b81ed0b85814483587",
+        "actual_sha256": "1a9fd7ad292ea79ae8b82145d5fb18569e745d085fbf54b81ed0b85814483587",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/native-v1/FREEZE-native-checks-v1.json",
+        "path": "fixtures/native-v1/expectations-v1.json",
+        "expected_sha256": "df00edc83ada0d97f4aaa50161c15b0763565d04992f83548f32a1343d7aedb0",
+        "actual_sha256": "df00edc83ada0d97f4aaa50161c15b0763565d04992f83548f32a1343d7aedb0",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/native-v1/PORTABILITY_FREEZE_v1.1.json",
+        "path": "tests/check_png_pixels.py",
+        "expected_sha256": "80332d6acb08559e301fd3e9b3f26cc383206b988e121999b69e431f36e8db92",
+        "actual_sha256": "80332d6acb08559e301fd3e9b3f26cc383206b988e121999b69e431f36e8db92",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/native-v1/PORTABILITY_FREEZE_v1.1.json",
+        "path": "fixtures/native-v1/PORTABILITY_CONTRACT_CLARIFICATION_v1.1.md",
+        "expected_sha256": "2b5aea2ea01841a97f9c45255cc40bf425efbd766fc9e58f9ebbeba3ea3f8068",
+        "actual_sha256": "2b5aea2ea01841a97f9c45255cc40bf425efbd766fc9e58f9ebbeba3ea3f8068",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/native-v1/PORTABILITY_FREEZE_v1.json",
+        "path": "fixtures/native-v1/portability-expectations-v1.json",
+        "expected_sha256": "ec2854dd4b446dd349b7b3a8a36385570dc5cdad1b66a3fadc6dc5e81e029ff1",
+        "actual_sha256": "ec2854dd4b446dd349b7b3a8a36385570dc5cdad1b66a3fadc6dc5e81e029ff1",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/stage1_1/FREEZE-v1.1.json",
+        "path": "fixtures/stage1_1/scenarios-v1.1.json",
+        "expected_sha256": "c3ee3e13d077b76cdfd2d3ce1c4b2aef5dd76cab8530f1b68f6d1ddee2fa446e",
+        "actual_sha256": "c3ee3e13d077b76cdfd2d3ce1c4b2aef5dd76cab8530f1b68f6d1ddee2fa446e",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/stage1_1/FREEZE-v1.1.json",
+        "path": "fixtures/stage1_1/process-v1.1.json",
+        "expected_sha256": "7c9ad2665c0bc2fa5e3ebcb74edd2dee77eb92d4e238aa6d5b9cc84f8b4e5b8c",
+        "actual_sha256": "7c9ad2665c0bc2fa5e3ebcb74edd2dee77eb92d4e238aa6d5b9cc84f8b4e5b8c",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/stage1_1/FREEZE-v1.1.json",
+        "path": "fixtures/stage1_1/legacy-preconditions-v1.1.json",
+        "expected_sha256": "a4aa506df439c53bb9c78525afec8917d204d366b84f532519c207579985e879",
+        "actual_sha256": "a4aa506df439c53bb9c78525afec8917d204d366b84f532519c207579985e879",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/stage1_1/FREEZE-v1.1.json",
+        "path": "fixtures/author_stage11.py",
+        "expected_sha256": "bdd28eb53afd253696daeee0aef2fac0280b3951deb08e2c40df0d293f711bd1",
+        "actual_sha256": "bdd28eb53afd253696daeee0aef2fac0280b3951deb08e2c40df0d293f711bd1",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/stage1_1/PROCESS-INVARIANTS-FREEZE-v1.1.1.json",
+        "path": "fixtures/stage1_1/process-invariants-v1.1.1.json",
+        "expected_sha256": "88337c0ebffc754d8a4bd40a54bc4d842f3176a6ca737d69451302c559c7178c",
+        "actual_sha256": "88337c0ebffc754d8a4bd40a54bc4d842f3176a6ca737d69451302c559c7178c",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/stage1_1_1/FREEZE-v1.1.1.json",
+        "path": "fixtures/stage1_1_1/cli-cancellation-v1.1.1.json",
+        "expected_sha256": "eae6d1ea117efa63484f48142f1b5cbf9c08ebf6accf80b5505f8e0bfeec866b",
+        "actual_sha256": "eae6d1ea117efa63484f48142f1b5cbf9c08ebf6accf80b5505f8e0bfeec866b",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "ROADMAP_ADDENDUM_v1.md",
+        "expected_sha256": "2544db3c44096479ba8fb01944ca813280b078e667ca03308f96fd2488fd976a",
+        "actual_sha256": "2544db3c44096479ba8fb01944ca813280b078e667ca03308f96fd2488fd976a",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "STAGE_1_POLICY_ADDENDUM_v1.md",
+        "expected_sha256": "cf6a043e7df3031ceeae21479faffb316b741a77bf7a8ed3eb9444cef5a5d15c",
+        "actual_sha256": "cf6a043e7df3031ceeae21479faffb316b741a77bf7a8ed3eb9444cef5a5d15c",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/author_spec_v1.py",
+        "expected_sha256": "c847e48a2b59fe640fe97f3b1e627332516e90efef65e6e37ba8702b3c497e93",
+        "actual_sha256": "c847e48a2b59fe640fe97f3b1e627332516e90efef65e6e37ba8702b3c497e93",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/accounting-v1.json",
+        "expected_sha256": "f8f6e9ae7ea928aa83bc263567f9b28717e0d8681aac6fee6d6106f6b1ffde91",
+        "actual_sha256": "f8f6e9ae7ea928aa83bc263567f9b28717e0d8681aac6fee6d6106f6b1ffde91",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/artifacts.json",
+        "expected_sha256": "55d62402cec818ebc19d574d4b231acef3b86e12e93328a092a0787a11b9ab74",
+        "actual_sha256": "55d62402cec818ebc19d574d4b231acef3b86e12e93328a092a0787a11b9ab74",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/bundle-a.txt",
+        "expected_sha256": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "actual_sha256": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/bundle-b.txt",
+        "expected_sha256": "b9778ac2150818914c22e573253e3cf11b63e145cdea59e076152d72577b9053",
+        "actual_sha256": "b9778ac2150818914c22e573253e3cf11b63e145cdea59e076152d72577b9053",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/candidate-a.txt",
+        "expected_sha256": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "actual_sha256": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/candidate-b.txt",
+        "expected_sha256": "9ce08f7a08864696c20b3a2be33deb9e9ed6af49d004b199e7c35bbc220ba4c3",
+        "actual_sha256": "9ce08f7a08864696c20b3a2be33deb9e9ed6af49d004b199e7c35bbc220ba4c3",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/clay.txt",
+        "expected_sha256": "871bbfd2b29310f02a71c3391f6ff2a113a4f8ccda1fc1ea55b7cc4da6047183",
+        "actual_sha256": "871bbfd2b29310f02a71c3391f6ff2a113a4f8ccda1fc1ea55b7cc4da6047183",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/config.txt",
+        "expected_sha256": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+        "actual_sha256": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/coverage-v1.json",
+        "expected_sha256": "1ce6fd17b580853f3ad12d6e13b8b0d03b196b68df7453efbaba27214513787a",
+        "actual_sha256": "1ce6fd17b580853f3ad12d6e13b8b0d03b196b68df7453efbaba27214513787a",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/other-recipe.txt",
+        "expected_sha256": "b9bc2f75305ad89a21b312e5435182ed5a83b74ba582d2bb003698d2fc2f50f4",
+        "actual_sha256": "b9bc2f75305ad89a21b312e5435182ed5a83b74ba582d2bb003698d2fc2f50f4",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/package.txt",
+        "expected_sha256": "67a7b25879b3550beb0b164a1debd446074a1c31096d03aa723c4f9e3ab59f4d",
+        "actual_sha256": "67a7b25879b3550beb0b164a1debd446074a1c31096d03aa723c4f9e3ab59f4d",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/profile.json",
+        "expected_sha256": "19b533c84f9ce7a2f5307f9e52d36e94681c17ef7c9ab3412828a02678afdce4",
+        "actual_sha256": "19b533c84f9ce7a2f5307f9e52d36e94681c17ef7c9ab3412828a02678afdce4",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/profile.txt",
+        "expected_sha256": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "actual_sha256": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/recipe.txt",
+        "expected_sha256": "3b7730cb933eee0f709fb372d2cec049b2826c0681335702e8ef3d9bb4462de9",
+        "actual_sha256": "3b7730cb933eee0f709fb372d2cec049b2826c0681335702e8ef3d9bb4462de9",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/scenarios-v1.json",
+        "expected_sha256": "1a9fd7ad292ea79ae8b82145d5fb18569e745d085fbf54b81ed0b85814483587",
+        "actual_sha256": "1a9fd7ad292ea79ae8b82145d5fb18569e745d085fbf54b81ed0b85814483587",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/scope.txt",
+        "expected_sha256": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "actual_sha256": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "fixtures/synthetic/special-v1.json",
+        "expected_sha256": "e6747dc817dff3e4e5269892b56909c68044a613c5c15db67b833bafaefd1fa9",
+        "actual_sha256": "e6747dc817dff3e4e5269892b56909c68044a613c5c15db67b833bafaefd1fa9",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "policies/stage1-v1.json",
+        "expected_sha256": "896ea0b43c058ddaee8e25818c8d9c17e5af956012d832e64a20eeb50f0cbd30",
+        "actual_sha256": "896ea0b43c058ddaee8e25818c8d9c17e5af956012d832e64a20eeb50f0cbd30",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/FREEZE-v1.json",
+        "path": "schemas/stage1-v1.schema.json",
+        "expected_sha256": "ebf187600e3f5f71c11bb022e482e4392a563f239e0e10d139ec9553aa93b7a4",
+        "actual_sha256": "ebf187600e3f5f71c11bb022e482e4392a563f239e0e10d139ec9553aa93b7a4",
+        "matches": true
+      },
+      {
+        "manifest": "fixtures/synthetic/SUPPLEMENT-FREEZE-v1.json",
+        "path": "fixtures/synthetic/SUPPLEMENT-v1.json",
+        "expected_sha256": "a0ce1c2f6ac920e87bbc4f730bf630cc84a54df55d18d7ddad5c735b7f75d064",
+        "actual_sha256": "a0ce1c2f6ac920e87bbc4f730bf630cc84a54df55d18d7ddad5c735b7f75d064",
+        "matches": true
+      },
+      {
+        "manifest": "policies/NATIVE_CONTRACT_FREEZE_v1.json",
+        "path": "schemas/native-v1.schema.json",
+        "expected_sha256": "19e8e2d5fe983192e7499e0e3c50d70be979960964a3c9e624238e5ed6237110",
+        "actual_sha256": "19e8e2d5fe983192e7499e0e3c50d70be979960964a3c9e624238e5ed6237110",
+        "matches": true
+      },
+      {
+        "manifest": "policies/NATIVE_CONTRACT_FREEZE_v1.json",
+        "path": "policies/native-limits-v1.json",
+        "expected_sha256": "5e9a903208f3c4f27a5d3a7adb3bd39a56ae3d8379ca4b1b1623cfd86a6db3de",
+        "actual_sha256": "5e9a903208f3c4f27a5d3a7adb3bd39a56ae3d8379ca4b1b1623cfd86a6db3de",
+        "matches": true
+      },
+      {
+        "manifest": "policies/NATIVE_PROFILE_REVISION_FREEZE_v1.json",
+        "path": "schemas/native-profile-revision-v1.schema.json",
+        "expected_sha256": "947fc2adeb7aaa71a490fc38b06023833bee4e5f38c022a1bb0dbf3c70500b4e",
+        "actual_sha256": "947fc2adeb7aaa71a490fc38b06023833bee4e5f38c022a1bb0dbf3c70500b4e",
+        "matches": true
+      }
+    ]
+  },
+  "limitations": [
+    "Historical source documents are public citation-redacted editions, not byte-identical originals. Original document SHA-256 values remain in preserved historical manifests and this report.",
+    "Historical source attachments named by withheld citations are not part of the public repository.",
+    "No test oracle or routing logic was changed, but source-preservation metadata was intentionally revised for this public edition."
+  ]
+}

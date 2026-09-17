@@ -1,0 +1,239 @@
+{
+  "A01": [
+    "A01"
+  ],
+  "A02": [
+    "A02-confirmed",
+    "A02-unknown"
+  ],
+  "A03": [
+    "A03"
+  ],
+  "A04": [
+    "A04-dispatch",
+    "A04"
+  ],
+  "A05": [
+    "A05"
+  ],
+  "A06": [
+    "A06-stale-parent",
+    "A06-traversal",
+    "A06-absolute",
+    "A06-casefold",
+    "A06-symlink",
+    "A06-valid"
+  ],
+  "A07": [
+    "A07-synthetic_fixture",
+    "A07-historical_report",
+    "A07-builder_self_pass"
+  ],
+  "A08": [
+    "A08"
+  ],
+  "B01": [
+    "B01-review-evidence"
+  ],
+  "B02": [
+    "B02-profile-authority"
+  ],
+  "B03": [
+    "B03-no-reset-fiddle"
+  ],
+  "B04": [
+    "B04-unknown-budget"
+  ],
+  "B05": [
+    "B05-late-adopt-at-cap"
+  ],
+  "C1": [
+    "C1-bookkeeping",
+    "C1-stale-profile",
+    "C1-stale-scope",
+    "P03",
+    "P10",
+    "P12"
+  ],
+  "C2": [
+    "C2-closure",
+    "C2-single",
+    "C2-exploratory"
+  ],
+  "C3": [
+    "C3-exact-archive",
+    "T20-native-bytes",
+    "T20-native-creative",
+    "T20-native-cap"
+  ],
+  "C4": [
+    "C4-clay-next-cycle",
+    "C4-clay-cap",
+    "C4-unchanged-failures"
+  ],
+  "R01": [
+    "R01",
+    "P01"
+  ],
+  "R02": [
+    "R02-not_launched",
+    "R02-unknown",
+    "P02"
+  ],
+  "R03": [
+    "R03",
+    "P03"
+  ],
+  "R04": [
+    "R04",
+    "P06"
+  ],
+  "R05": [
+    "R05",
+    "P04"
+  ],
+  "R06": [
+    "R06",
+    "P05"
+  ],
+  "R07": [
+    "R07",
+    "P01"
+  ],
+  "R08": [
+    "R08-unknown",
+    "R08-recovered"
+  ],
+  "R09": [
+    "R09-running",
+    "R09-failed"
+  ],
+  "R10": [
+    "R10",
+    "P04"
+  ],
+  "R11": [
+    "R11",
+    "P05"
+  ],
+  "R12": [
+    "R12",
+    "P10"
+  ],
+  "R13": [
+    "R13-missing",
+    "R13-corrupt",
+    "P09"
+  ],
+  "R14": [
+    "R14",
+    "P11"
+  ],
+  "R15": [
+    "R15",
+    "P07"
+  ],
+  "R16": [
+    "R16",
+    "P08"
+  ],
+  "R17": [
+    "R17",
+    "P05"
+  ],
+  "R18": [
+    "R18"
+  ],
+  "T01": [
+    "T01"
+  ],
+  "T02": [
+    "T02"
+  ],
+  "T03": [
+    "T03"
+  ],
+  "T04": [
+    "T04"
+  ],
+  "T05": [
+    "T05-repair",
+    "T05-cap"
+  ],
+  "T06": [
+    "T06"
+  ],
+  "T07": [
+    "T07"
+  ],
+  "T08": [
+    "T08"
+  ],
+  "T09": [
+    "T09-config",
+    "T09-profile",
+    "T09-new-profile"
+  ],
+  "T10": [
+    "T10"
+  ],
+  "T11": [
+    "T11-uv",
+    "T11-shape-key",
+    "T11-modifier",
+    "T11-unsupported"
+  ],
+  "T12": [
+    "T12"
+  ],
+  "T13": [
+    "T13"
+  ],
+  "T14": [
+    "T14"
+  ],
+  "T15": [
+    "T15-evidence",
+    "T15-tool"
+  ],
+  "T16": [
+    "T16"
+  ],
+  "T17": [
+    "T17"
+  ],
+  "T18": [
+    "T18"
+  ],
+  "T19": [
+    "T19-fail",
+    "T19-build"
+  ],
+  "T20": [
+    "T20-package-repair",
+    "T20-native-bytes",
+    "T20-native-creative",
+    "T20-native-cap"
+  ],
+  "T21": [
+    "T21"
+  ],
+  "T22": [
+    "T22"
+  ],
+  "T23": [
+    "T23"
+  ],
+  "T24": [
+    "T24"
+  ],
+  "T25": [
+    "T25-simulated_usd",
+    "T25-active_seconds",
+    "T25-jobs",
+    "T25-retries_global"
+  ],
+  "T26": [
+    "T26"
+  ]
+}

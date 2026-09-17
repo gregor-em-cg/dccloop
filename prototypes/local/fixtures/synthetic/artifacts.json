@@ -1,0 +1,57 @@
+{
+  "bundle-a": {
+    "bytes": 73,
+    "path": "fixtures/synthetic/bundle-a.txt",
+    "sha256": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+  },
+  "bundle-b": {
+    "bytes": 73,
+    "path": "fixtures/synthetic/bundle-b.txt",
+    "sha256": "b9778ac2150818914c22e573253e3cf11b63e145cdea59e076152d72577b9053"
+  },
+  "candidate-a": {
+    "bytes": 76,
+    "path": "fixtures/synthetic/candidate-a.txt",
+    "sha256": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3"
+  },
+  "candidate-b": {
+    "bytes": 76,
+    "path": "fixtures/synthetic/candidate-b.txt",
+    "sha256": "9ce08f7a08864696c20b3a2be33deb9e9ed6af49d004b199e7c35bbc220ba4c3"
+  },
+  "clay": {
+    "bytes": 69,
+    "path": "fixtures/synthetic/clay.txt",
+    "sha256": "871bbfd2b29310f02a71c3391f6ff2a113a4f8ccda1fc1ea55b7cc4da6047183"
+  },
+  "config": {
+    "bytes": 71,
+    "path": "fixtures/synthetic/config.txt",
+    "sha256": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+  },
+  "other-recipe": {
+    "bytes": 77,
+    "path": "fixtures/synthetic/other-recipe.txt",
+    "sha256": "b9bc2f75305ad89a21b312e5435182ed5a83b74ba582d2bb003698d2fc2f50f4"
+  },
+  "package": {
+    "bytes": 72,
+    "path": "fixtures/synthetic/package.txt",
+    "sha256": "67a7b25879b3550beb0b164a1debd446074a1c31096d03aa723c4f9e3ab59f4d"
+  },
+  "profile": {
+    "bytes": 72,
+    "path": "fixtures/synthetic/profile.txt",
+    "sha256": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2"
+  },
+  "recipe": {
+    "bytes": 71,
+    "path": "fixtures/synthetic/recipe.txt",
+    "sha256": "3b7730cb933eee0f709fb372d2cec049b2826c0681335702e8ef3d9bb4462de9"
+  },
+  "scope": {
+    "bytes": 70,
+    "path": "fixtures/synthetic/scope.txt",
+    "sha256": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620"
+  }
+}

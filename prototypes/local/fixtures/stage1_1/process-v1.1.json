@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "P11-cancel-live-restart",
+      "expected": {
+        "status": "cancelled",
+        "gate": "G3",
+        "starts": 1,
+        "adoptions": 1,
+        "I": 1,
+        "V": 0,
+        "job_results": 1,
+        "usage_rows": 1,
+        "followup_launches": 0
+      }
+    },
+    {
+      "id": "P11-noncancel-restart",
+      "expected": {
+        "status": "running",
+        "gate": "G4",
+        "starts": 1,
+        "adoptions": 1,
+        "I": 1,
+        "V": 1,
+        "job_results": 1,
+        "usage_rows": 1,
+        "followup_launches": 0
+      }
+    }
+  ]
+}

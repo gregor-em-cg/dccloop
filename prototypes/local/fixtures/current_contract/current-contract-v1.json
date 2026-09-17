@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "authority": "User accepted Blender_Build_Test_Refine_Next_Brief.md section 1, P11 cancellation clarification. This version changes current acceptance only; no historical expectation edits.",
+  "case": {
+    "id": "CURRENT-P11",
+    "kind": "mismatch",
+    "classification": "actual_cli_with_injected_identity",
+    "cancel_check": {
+      "counts.R": 1,
+      "counts.D": 0,
+      "counts.I": 1,
+      "counts.V": 0,
+      "counts.J": 1,
+      "counts.starts": 1,
+      "counts.E": 0,
+      "counts.T": 0,
+      "counts.F": 0,
+      "counts.M": 0,
+      "counts.X": 0,
+      "call_count": 1,
+      "signoff": null,
+      "status": "cancelled",
+      "gate": "G3",
+      "gates.G3": "unknown",
+      "reason": "user_cancelled",
+      "job_status": "unknown",
+      "cancel_decisions": 1
+    },
+    "final": {
+      "counts.R": 1,
+      "counts.D": 0,
+      "counts.I": 1,
+      "counts.V": 0,
+      "counts.J": 1,
+      "counts.starts": 1,
+      "counts.E": 0,
+      "counts.T": 0,
+      "counts.F": 0,
+      "counts.M": 0,
+      "counts.X": 0,
+      "call_count": 1,
+      "signoff": null,
+      "status": "cancelled",
+      "gate": "G3",
+      "gates.G3": "unknown",
+      "job_status": "committed",
+      "result_count": 1,
+      "receipt_rows": 1,
+      "usage_rows": 1,
+      "cancel_decisions": 1,
+      "job_applicable": false,
+      "worker_executions": 1,
+      "usage.tokens": 0,
+      "usage.active_seconds": 0,
+      "usage.simulated_usd": 0,
+      "artifact_refs_count": 1,
+      "reason": "user_cancelled"
+    },
+    "sentinel_must_survive": true,
+    "authority": "Approved next brief section 1; actual subprocesses with deliberately injected wrong process identity; no signal outcomes are mocked."
+  },
+  "historical_P11": {
+    "original_expected": {
+      "status": "blocked",
+      "unrelated_alive": true
+    },
+    "obsolete_assertion": "assert state['reason']=='outcome_unknown'",
+    "obsolete_error": "",
+    "current_state": {
+      "status": "cancelled",
+      "reason": "user_cancelled",
+      "job_status": "unknown",
+      "cancel_decisions": 1,
+      "result_count": 0,
+      "receipt_rows": 0,
+      "usage_rows": 0,
+      "signoff": null,
+      "counts.V": 0
+    }
+  },
+  "negative_bare_G3_cases": [
+    {
+      "id": "T20-package-repair",
+      "original_expected": {
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "counts": {
+          "D": 0,
+          "E": 1,
+          "F": 0,
+          "I": 1,
+          "J": 3,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 1,
+          "starts": 3
+        },
+        "status": "awaiting_human_review"
+      },
+      "original_seed": {
+        "best": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "brief_ready": true,
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 1,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 1
+        },
+        "gate": "G4",
+        "gates": {
+          "G0": "valid",
+          "G1": "valid",
+          "G2": "valid",
+          "G3": "valid",
+          "G4": "unknown",
+          "G5": "unknown"
+        },
+        "mode": "refinement",
+        "round_closed": true
+      },
+      "current_state": {
+        "status": "blocked",
+        "reason": "review_binding_required",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 1,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 1
+        },
+        "jobs": {},
+        "review_plan": {},
+        "reviews": {},
+        "signoff": null,
+        "call_log": []
+      },
+      "completed_variant_required": "pass",
+      "source": "fixtures/synthetic/scenarios-v1.json#T20-package-repair"
+    },
+    {
+      "id": "T21",
+      "original_expected": {
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 2,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 2
+        },
+        "reason": "portability_failure",
+        "status": "needs_evidence"
+      },
+      "original_seed": {
+        "best": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "brief_ready": true,
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 1,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 1
+        },
+        "gate": "G4",
+        "gates": {
+          "G0": "valid",
+          "G1": "valid",
+          "G2": "valid",
+          "G3": "valid",
+          "G4": "unknown",
+          "G5": "unknown"
+        },
+        "mode": "refinement",
+        "round_closed": true
+      },
+      "current_state": {
+        "status": "blocked",
+        "reason": "review_binding_required",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 1,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 1
+        },
+        "jobs": {},
+        "review_plan": {},
+        "reviews": {},
+        "signoff": null,
+        "call_log": []
+      },
+      "completed_variant_required": "pass",
+      "source": "fixtures/synthetic/scenarios-v1.json#T21"
+    },
+    {
+      "id": "T24",
+      "original_expected": {
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 2,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 2
+        },
+        "reason": "feedback",
+        "status": "blocked"
+      },
+      "original_seed": {
+        "best": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "brief_ready": true,
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 2,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 2
+        },
+        "gate": "G5",
+        "gates": {
+          "G0": "valid",
+          "G1": "valid",
+          "G2": "valid",
+          "G3": "valid",
+          "G4": "valid",
+          "G5": "unknown"
+        },
+        "mode": "refinement",
+        "package": "67a7b25879b3550beb0b164a1debd446074a1c31096d03aa723c4f9e3ab59f4d",
+        "round_closed": true,
+        "status": "awaiting_human_review"
+      },
+      "current_state": {
+        "status": "awaiting_human_review",
+        "reason": "invalid_signoff_identity",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 2,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 2
+        },
+        "jobs": {},
+        "review_plan": {},
+        "reviews": {},
+        "signoff": null,
+        "call_log": []
+      },
+      "completed_variant_required": "pass",
+      "source": "fixtures/synthetic/scenarios-v1.json#T24"
+    },
+    {
+      "id": "C3-exact-archive",
+      "original_expected": {
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 2,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 2
+        },
+        "status": "awaiting_human_review"
+      },
+      "original_seed": {
+        "best": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "brief_ready": true,
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 1,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 1
+        },
+        "gate": "G4",
+        "gates": {
+          "G0": "valid",
+          "G1": "valid",
+          "G2": "valid",
+          "G3": "valid",
+          "G4": "unknown",
+          "G5": "unknown"
+        },
+        "mode": "refinement",
+        "round_closed": true
+      },
+      "current_state": {
+        "status": "blocked",
+        "reason": "review_binding_required",
+        "counts": {
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "I": 1,
+          "J": 1,
+          "M": 0,
+          "R": 1,
+          "S": 0,
+          "T": 0,
+          "V": 1,
+          "X": 0,
+          "d": 0,
+          "e": 0,
+          "starts": 1
+        },
+        "jobs": {},
+        "review_plan": {},
+        "reviews": {},
+        "signoff": null,
+        "call_log": []
+      },
+      "completed_variant_required": "pass",
+      "source": "fixtures/synthetic/scenarios-v1.json#C3-exact-archive"
+    }
+  ],
+  "expected_group_totals": {
+    "literal": {
+      "total": 125,
+      "passed": 120,
+      "failed": 5
+    },
+    "completed": {
+      "total": 125,
+      "passed": 124,
+      "failed": 1
+    },
+    "stage11": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "stage111": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    }
+  },
+  "positive_recovery_case_ids": [
+    "CLI-normal-recovery",
+    "CLI-live-owner",
+    "P11-noncancel-restart"
+  ],
+  "expectation_independence": "Written before this milestone tests; only reads frozen prior fixture data and approved contract. Does not import routing code."
+}

@@ -1,0 +1,117 @@
+{
+  "recorded_utc": "2026-09-17T02:13:06.837336+00:00",
+  "platform": "Darwin",
+  "platform_release": "25.6.0",
+  "python_version": "3.14.5",
+  "passed": true,
+  "provenance": "Executed local source-snapshot checks; see per-group classifications",
+  "native_applications_executed": false,
+  "model_providers_called": false,
+  "groups": {
+    "mock_contract": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.run_current_contract",
+        "--run-suites"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 54.154,
+      "raw_log_local_only": ".test-output/mock-contract.log",
+      "classification": "Actual local mock Python process checks plus synthetic policy scenarios",
+      "acceptance_passed": true,
+      "historical_groups": [
+        {
+          "group": "literal",
+          "total": 125,
+          "passed": 120,
+          "failed": 5,
+          "historical_exit_code": 1,
+          "historical_failures": [
+            "T20-package-repair",
+            "T21",
+            "T24",
+            "C3-exact-archive",
+            "P11"
+          ]
+        },
+        {
+          "group": "completed",
+          "total": 125,
+          "passed": 124,
+          "failed": 1,
+          "historical_exit_code": 1,
+          "historical_failures": [
+            "P11"
+          ]
+        },
+        {
+          "group": "stage11",
+          "total": 15,
+          "passed": 15,
+          "failed": 0,
+          "historical_exit_code": 0,
+          "historical_failures": []
+        },
+        {
+          "group": "stage111",
+          "total": 8,
+          "passed": 8,
+          "failed": 0,
+          "historical_exit_code": 0,
+          "historical_failures": []
+        }
+      ],
+      "current_P11": "pass",
+      "preservation": {
+        "checked_files": 44,
+        "changed": []
+      },
+      "skipped": [],
+      "unexplained_failures": 0
+    },
+    "native_guards": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "tests.test_native_integrity"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.879,
+      "raw_log_local_only": ".test-output/native-guards.log",
+      "classification": "Simulated host/receipt inputs; one actual Python CLI ownership check; native launch spy",
+      "passed": 12,
+      "failed": [],
+      "skipped": [],
+      "global_budget_unchanged": true,
+      "blender_executed": false
+    },
+    "geometry": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_fluted_candidate_v4",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.486,
+      "raw_log_local_only": ".test-output/geometry.log",
+      "classification": "Python geometry predicates with damaged-mesh controls; no visual quality claim",
+      "tests_run": 5
+    }
+  },
+  "errors": [],
+  "unverified": [
+    "Native Blender execution in this public snapshot",
+    "Other DCCs/renderers",
+    "Live model providers",
+    "Windows controller operation",
+    "Host power loss",
+    "Production visual acceptance",
+    "All crash boundaries"
+  ]
+}

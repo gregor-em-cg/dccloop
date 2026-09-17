@@ -1,0 +1,1212 @@
+{
+  "reason": "Fourteen original seeds contain G3=valid without any supporting review/plan. A strict runtime binding guard cannot treat that flag as sufficient evidence. This is an explicit separately versioned test-input completion; original fixture files and expected outcomes remain unchanged. Literal original results are reported separately.",
+  "completions": {
+    "T09-new-profile": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "T20-package-repair": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "T20-native-bytes": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "T20-native-creative": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "T20-native-cap": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 10,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "b44b5fe9cd0f88d46e6a3a3927a398cb0ca4ec8cfd7477826a45e335ef771681",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "b44b5fe9cd0f88d46e6a3a3927a398cb0ca4ec8cfd7477826a45e335ef771681",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 10
+      }
+    },
+    "T21": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "T24": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "R13-missing": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "R13-corrupt": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "A07-synthetic_fixture": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "A07-historical_report": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "A07-builder_self_pass": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "C2-exploratory": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    },
+    "C3-exact-archive": {
+      "jobs": {
+        "prior-review": {
+          "intent": {
+            "job_id": "prior-review",
+            "kind": "review",
+            "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+            "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+            "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+            "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+            "recipe": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0",
+            "owner_epoch": 1,
+            "round": 1,
+            "review_scope": "required",
+            "creative": false
+          },
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "request_digest": "777cfce3cca9f103fd3d43d925e812267c0c037787cf9fdea0dc666cbcf88f2d",
+          "status": "committed",
+          "attempt": 1,
+          "adopt_epoch": 1,
+          "retries": 0,
+          "results": [
+            {
+              "attempt": 1,
+              "result": {
+                "criteria": {
+                  "C1": "PASS",
+                  "C2": "PASS",
+                  "C3": "PASS",
+                  "C4": "PASS",
+                  "C5": "PASS",
+                  "C6": "PASS",
+                  "C7": "PASS",
+                  "C8": "PASS"
+                },
+                "evidence_ids": [
+                  "full",
+                  "detail",
+                  "alternate"
+                ],
+                "first_impression": "SYNTHETIC independent test verdict",
+                "technical": true
+              }
+            }
+          ],
+          "counted_attempts": [
+            1
+          ],
+          "applicable": true,
+          "config_at_dispatch": "0bd5deb64526167de81a94533f275096de5d50126b121a983c457dad19b4fbc0"
+        }
+      },
+      "reviews": {
+        "prior-review": {
+          "criteria": {
+            "C1": "PASS",
+            "C2": "PASS",
+            "C3": "PASS",
+            "C4": "PASS",
+            "C5": "PASS",
+            "C6": "PASS",
+            "C7": "PASS",
+            "C8": "PASS"
+          },
+          "valid": true,
+          "first_impression": "SYNTHETIC completed fixture precondition",
+          "intent_sha256": "4756cbfc57dafbdd82de9e8afce8f5b595468c2c145c80de3f598bec7864d49d",
+          "scope": "required",
+          "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+          "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a"
+        }
+      },
+      "review_plan": {
+        "required": [
+          "prior-review"
+        ],
+        "closed": true,
+        "dispatched": true,
+        "candidate": "48940fe917fa12def02096315ccf2867759bb3f9fac77104b5370d80d3998bb3",
+        "bundle": "070faa16f04dcaeb0be11f960a21424c4e60ea3974594656d0e49349defa4c3a",
+        "profile": "1b391a9a91f0c152780ef3117e30a2263eb5452b5e39442b4414c4f6008541c2",
+        "scope": "3a6cd7bf08077c3e9edf7f0fe39ab3752d4d23af58ffc0faa15a98a92add4620",
+        "round": 1
+      }
+    }
+  },
+  "supplement_uses": {
+    "S06": "T20-native-bytes"
+  }
+}

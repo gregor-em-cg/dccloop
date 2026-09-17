@@ -1,0 +1,158 @@
+{
+  "version": "v1",
+  "purpose": "Additional deterministic boundary variants; no replacement of frozen v1 expectations. Authored before the dispatch/cancellation hardening below.",
+  "cases": [
+    {
+      "id": "S01",
+      "requirements": [
+        "R02",
+        "R08"
+      ],
+      "fault": "dispatch_uncertain",
+      "expected": {
+        "status": "blocked",
+        "reason": "outcome_unknown",
+        "starts": 0,
+        "counter_starts": 0,
+        "adoptions": 0,
+        "J": 1
+      }
+    },
+    {
+      "id": "S02",
+      "requirements": [
+        "R10"
+      ],
+      "fault": "before_result_commit",
+      "expected": {
+        "starts": 1,
+        "adoptions": 1,
+        "V": 1,
+        "I": 1
+      }
+    },
+    {
+      "id": "S03",
+      "requirements": [
+        "R07"
+      ],
+      "fault": "review_before_intent_commit",
+      "expected": {
+        "starts": 1,
+        "adoptions": 1,
+        "V": 1,
+        "I": 1
+      }
+    },
+    {
+      "id": "S04",
+      "requirements": [
+        "R05"
+      ],
+      "fault": "corrupt_orphan",
+      "expected": {
+        "starts": 1,
+        "adoptions": 0,
+        "status": "blocked",
+        "reason": "integrity"
+      }
+    },
+    {
+      "id": "S05",
+      "requirements": [
+        "R16"
+      ],
+      "fault": "cancel_reconcile",
+      "expected": {
+        "status": "cancelled",
+        "starts": 1,
+        "adoptions": 0,
+        "reservations": 0,
+        "job_status": "cancelled"
+      }
+    },
+    {
+      "id": "S06",
+      "requirements": [
+        "C3"
+      ],
+      "fault": "rewrite_bound_signoff",
+      "expected": {
+        "candidate_changed": true,
+        "review_invalidated": true,
+        "signoff": null,
+        "D": 0,
+        "R": 2
+      }
+    },
+    {
+      "id": "S07",
+      "requirements": [
+        "C1",
+        "A06"
+      ],
+      "fault": "unsafe_job_path",
+      "expected": {
+        "rejected": true,
+        "J": 0
+      }
+    },
+    {
+      "id": "S08",
+      "requirements": [
+        "C1"
+      ],
+      "fault": "incompatible_resume_policy",
+      "expected": {
+        "rejected": true
+      }
+    },
+    {
+      "id": "S09",
+      "requirements": [
+        "T12"
+      ],
+      "fault": "scope_unfreeze",
+      "expected": {
+        "expanded_without_authority": false,
+        "authorized_scope_applied": true,
+        "gates_invalidated": true
+      }
+    },
+    {
+      "id": "S10",
+      "requirements": [
+        "C2"
+      ],
+      "fault": "round_identity_change",
+      "expected": {
+        "new_round_while_active": "blocked",
+        "candidate_plan_mismatch": "blocked"
+      }
+    },
+    {
+      "id": "S11",
+      "requirements": [
+        "R18"
+      ],
+      "fault": "retry_usage",
+      "expected": {
+        "attempts": 2,
+        "usage_total": 5,
+        "V": 1,
+        "I": 2
+      }
+    },
+    {
+      "id": "S12",
+      "requirements": [
+        "A08",
+        "R13"
+      ],
+      "fault": "hash_guard_mutation",
+      "expected": {
+        "detected": true
+      }
+    }
+  ]
+}
