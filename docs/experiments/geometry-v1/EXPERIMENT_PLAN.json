@@ -1,0 +1,586 @@
+{
+  "schema_version": "geometry-experiment-plan/1",
+  "status": "proposed-products-selected-run-intake-pending",
+  "provenance": "[ESTIMATE] Proposed protocol, counts, limits and thresholds; no modeling experiment executed.",
+  "reference_baseline_commit": "900e30687de7a996b938611d5036dd0940a06103",
+  "execution_authorized": false,
+  "goal": "Qualify a repeatable geometry-only process for the explicitly tested asset families; report failure or inconclusive results honestly.",
+  "excluded_scope": [
+    "material development",
+    "production renderer selection",
+    "Max or other-DCC adapter implementation",
+    "new live provider integration",
+    "public product-asset upload",
+    "production controller redesign"
+  ],
+  "roles": [
+    "coordinator",
+    "builder",
+    "independent_reviewer"
+  ],
+  "native_dispatch_concurrency": 1,
+  "proposed_first_authorized_phases": [
+    "E0",
+    "E1"
+  ],
+  "phase_definitions": {
+    "E0": {
+      "purpose": "Evaluator/capability calibration and independent corruption controls",
+      "creative_comparison_trials": 0,
+      "outputs": [
+        "frozen_asset_profiles",
+        "positive_negative_control_results",
+        "view_capture_profile",
+        "capability_record"
+      ]
+    },
+    "E1": {
+      "purpose": "Construction comparison",
+      "trials": 8,
+      "max_creative_passes": 8
+    },
+    "E2": {
+      "purpose": "Same-parent equal-budget feedback comparison",
+      "trials": 8,
+      "max_creative_passes": 8
+    },
+    "E3": {
+      "purpose": "Protected-fidelity optimization comparison",
+      "trials": 2,
+      "max_creative_passes": 2
+    },
+    "E4": {
+      "purpose": "Locked baseline/challenger validation on two unseen synthetic geometries",
+      "trials": 8,
+      "max_creative_passes": 16
+    }
+  },
+  "asset_slots": [
+    {
+      "id": "D01",
+      "split": "development",
+      "proposed_family": "rounded vessel with neck, foot and repeated surface relief",
+      "kind": "real_product",
+      "selection": {
+        "asset_slot": "D01",
+        "product": "Joriel Vase",
+        "sku": "220121",
+        "url": "https://www.edwardmartin.com/products/joriel-vase",
+        "published_dimensions_in": {
+          "width": 14,
+          "depth": 14,
+          "height": 14
+        },
+        "selected_by": "owner",
+        "selection_evidence": "Owner supplied both product URLs and confirmed these two in this task.",
+        "reference_packet_status": "pending_image_freeze_and_asset_profile",
+        "source_provenance": "[docs] Edward Martin product page; published dimensions read from public productDetails payload; not physical measurements."
+      }
+    },
+    {
+      "id": "D02",
+      "split": "development",
+      "proposed_family": "open bowl with irregular rim, foot and projecting folded relief",
+      "kind": "real_product",
+      "selection": {
+        "asset_slot": "D02",
+        "product": "Ziven Bowl in Blue",
+        "sku": "220106",
+        "url": "https://www.edwardmartin.com/products/ziven-bowl-in-blue",
+        "published_dimensions_in": {
+          "width": 14,
+          "depth": 14,
+          "height": 6.25
+        },
+        "selected_by": "owner",
+        "selection_evidence": "Owner supplied both product URLs and confirmed these two in this task.",
+        "reference_packet_status": "pending_image_freeze_and_asset_profile",
+        "source_provenance": "[docs] Edward Martin product page; published dimensions read from public productDetails payload; not physical measurements."
+      }
+    },
+    {
+      "id": "H01",
+      "split": "sealed_validation",
+      "proposed_family": "unseen vessel with neck, foot and repeated geometric relief",
+      "kind": "synthetic",
+      "selection": null
+    },
+    {
+      "id": "H02",
+      "split": "sealed_validation",
+      "proposed_family": "unseen open bowl with rim and projecting folded relief",
+      "kind": "synthetic",
+      "selection": null
+    }
+  ],
+  "conditions": {
+    "A0": "Direct construction; normal planning permitted",
+    "A1": "Explicit part/dimension/uncertainty scaffold and coarse-to-fine construction",
+    "F0": "Builder self-review, one corrective pass",
+    "F1": "Separate structured reviewer feedback, one corrective pass",
+    "OPT": "One preregistered geometry optimization pass against unchanged parent",
+    "P0": {
+      "construction": "A0",
+      "feedback": "F0",
+      "optimization": "none",
+      "max_passes": 2
+    },
+    "P1": {
+      "construction": null,
+      "feedback": null,
+      "optimization": null,
+      "process_sha256": null,
+      "max_passes": 2,
+      "optimization_must_fit_inside_correction_pass": true
+    }
+  },
+  "fairness": {
+    "same_allowed_inputs": true,
+    "same_model_settings_within_comparison": true,
+    "same_total_role_resource_caps": true,
+    "same_correction_allowance": true,
+    "same_final_evaluator": true,
+    "same_starting_hash_in_E2": true,
+    "same_views_per_asset": true,
+    "failed_attempts_retained": true,
+    "final_holdout_scores_hidden_until_all_E4_traces_complete": true
+  },
+  "schedule": {
+    "counterbalance_seed": 1729,
+    "meaning": "Order randomization within paired asset/repeat blocks only; this is not a model generation seed",
+    "model_seed_control": null,
+    "builder_contexts": "fresh per trace; permitted within-trace context retained; no sharing between competing arms"
+  },
+  "proposed_budget": {
+    "max_creative_passes": 34,
+    "derivation": "8 E1 + 8 E2 + 2 E3 + (8 E4 traces * 2 passes) = 34",
+    "max_active_minutes_per_pass": 15,
+    "max_campaign_active_minutes": 600,
+    "final_evaluation_report_reserve_minutes": 90,
+    "max_native_jobs": 200,
+    "native_job_allocation": {
+      "build_support": 170,
+      "calibration": 10,
+      "finalization_reserve": 20
+    },
+    "max_total_native_seconds": 10800,
+    "native_job_timeout_seconds": 300,
+    "max_identical_technical_retries_per_job": 1,
+    "max_identical_technical_retries_campaign": 6,
+    "retries_count_inside_existing_caps": true,
+    "max_model_input_tokens": null,
+    "max_model_output_tokens": null,
+    "max_paid_usd": null,
+    "proof_max_pixels": null,
+    "per_job_memory_limit_mb": null,
+    "note": "Owner must adopt or revise finite limits before execution; missing paid-use limits block paid dispatch. Earliest exhausted cap stops work; caps are not runtime forecasts.",
+    "active_minutes_derivation": "34 passes * 15 active minutes + 90 final evaluation/report minutes = 600; E0 and orchestration overhead also consume this ceiling, so it does not guarantee all passes fit.",
+    "native_jobs_derivation": "34 passes * 5 support jobs + 10 calibration + 20 finalization = 200 maximum; allocation is a planning ceiling, not a per-pass entitlement."
+  },
+  "calibration_threshold_proposals": {
+    "synthetic_relative_dimension_error_max": 0.001,
+    "synthetic_landmark_error_over_largest_bbox_dimension_max": 0.005,
+    "known_camera_silhouette_overlap_min": 0.98,
+    "visual_rating_required_min": 3,
+    "visual_rating_scale_max": 4,
+    "real_asset_dimension_tolerances": null,
+    "scene_performance_limits": null,
+    "status": "proposals to calibrate and freeze before E1; not existing production standards"
+  },
+  "process_selection": {
+    "construction_winner": null,
+    "feedback_winner": null,
+    "optimization_policy_sha256": null,
+    "selection_rule": "COMMISSION.md Decision rules; one global protocol unless a separately preregistered routing rule is justified",
+    "holdout_release_requires_differentiated_P1_and_process_lock": true
+  },
+  "trial_totals": {
+    "rows": 26,
+    "max_creative_passes": 34,
+    "independent_validation_assets": 2,
+    "validation_repeats_per_asset_and_process": 2,
+    "warning": "Two real development products and two synthetic held-out assets. Views/repeats are not independent assets. No unseen-commercial-product transfer or population success-rate claim.",
+    "owner_selected_real_products_required": 2,
+    "independent_synthetic_validation_assets": 2,
+    "independent_real_validation_assets": 0
+  },
+  "trials": [
+    {
+      "trial_id": "E1-D01-R1-A1",
+      "phase": "E1",
+      "asset_slot": "D01",
+      "repeat": "R1",
+      "condition": "A1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 1
+    },
+    {
+      "trial_id": "E1-D01-R1-A0",
+      "phase": "E1",
+      "asset_slot": "D01",
+      "repeat": "R1",
+      "condition": "A0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 2
+    },
+    {
+      "trial_id": "E1-D01-R2-A0",
+      "phase": "E1",
+      "asset_slot": "D01",
+      "repeat": "R2",
+      "condition": "A0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 3
+    },
+    {
+      "trial_id": "E1-D01-R2-A1",
+      "phase": "E1",
+      "asset_slot": "D01",
+      "repeat": "R2",
+      "condition": "A1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 4
+    },
+    {
+      "trial_id": "E1-D02-R1-A0",
+      "phase": "E1",
+      "asset_slot": "D02",
+      "repeat": "R1",
+      "condition": "A0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 5
+    },
+    {
+      "trial_id": "E1-D02-R1-A1",
+      "phase": "E1",
+      "asset_slot": "D02",
+      "repeat": "R1",
+      "condition": "A1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 6
+    },
+    {
+      "trial_id": "E1-D02-R2-A1",
+      "phase": "E1",
+      "asset_slot": "D02",
+      "repeat": "R2",
+      "condition": "A1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 7
+    },
+    {
+      "trial_id": "E1-D02-R2-A0",
+      "phase": "E1",
+      "asset_slot": "D02",
+      "repeat": "R2",
+      "condition": "A0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 8
+    },
+    {
+      "trial_id": "E2-D01-R1-F1",
+      "phase": "E2",
+      "asset_slot": "D01",
+      "repeat": "R1",
+      "condition": "F1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D01-R1-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 9
+    },
+    {
+      "trial_id": "E2-D01-R1-F0",
+      "phase": "E2",
+      "asset_slot": "D01",
+      "repeat": "R1",
+      "condition": "F0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D01-R1-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 10
+    },
+    {
+      "trial_id": "E2-D01-R2-F1",
+      "phase": "E2",
+      "asset_slot": "D01",
+      "repeat": "R2",
+      "condition": "F1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D01-R2-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 11
+    },
+    {
+      "trial_id": "E2-D01-R2-F0",
+      "phase": "E2",
+      "asset_slot": "D01",
+      "repeat": "R2",
+      "condition": "F0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D01-R2-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 12
+    },
+    {
+      "trial_id": "E2-D02-R1-F0",
+      "phase": "E2",
+      "asset_slot": "D02",
+      "repeat": "R1",
+      "condition": "F0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D02-R1-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 13
+    },
+    {
+      "trial_id": "E2-D02-R1-F1",
+      "phase": "E2",
+      "asset_slot": "D02",
+      "repeat": "R1",
+      "condition": "F1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D02-R1-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 14
+    },
+    {
+      "trial_id": "E2-D02-R2-F0",
+      "phase": "E2",
+      "asset_slot": "D02",
+      "repeat": "R2",
+      "condition": "F0",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D02-R2-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 15
+    },
+    {
+      "trial_id": "E2-D02-R2-F1",
+      "phase": "E2",
+      "asset_slot": "D02",
+      "repeat": "R2",
+      "condition": "F1",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E1-D02-R2-{selected_construction}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 16
+    },
+    {
+      "trial_id": "E3-D01-R1-OPT",
+      "phase": "E3",
+      "asset_slot": "D01",
+      "repeat": "R1",
+      "condition": "OPT",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E2-D01-R1-{selected_feedback}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 17
+    },
+    {
+      "trial_id": "E3-D02-R1-OPT",
+      "phase": "E3",
+      "asset_slot": "D02",
+      "repeat": "R1",
+      "condition": "OPT",
+      "max_creative_passes": 1,
+      "shared_parent_selector": "E2-D02-R1-{selected_feedback}",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 18
+    },
+    {
+      "trial_id": "E4-H01-R1-P0",
+      "phase": "E4",
+      "asset_slot": "H01",
+      "repeat": "R1",
+      "condition": "P0",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 19
+    },
+    {
+      "trial_id": "E4-H01-R1-P1",
+      "phase": "E4",
+      "asset_slot": "H01",
+      "repeat": "R1",
+      "condition": "P1",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 20
+    },
+    {
+      "trial_id": "E4-H01-R2-P1",
+      "phase": "E4",
+      "asset_slot": "H01",
+      "repeat": "R2",
+      "condition": "P1",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 21
+    },
+    {
+      "trial_id": "E4-H01-R2-P0",
+      "phase": "E4",
+      "asset_slot": "H01",
+      "repeat": "R2",
+      "condition": "P0",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 22
+    },
+    {
+      "trial_id": "E4-H02-R1-P1",
+      "phase": "E4",
+      "asset_slot": "H02",
+      "repeat": "R1",
+      "condition": "P1",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 23
+    },
+    {
+      "trial_id": "E4-H02-R1-P0",
+      "phase": "E4",
+      "asset_slot": "H02",
+      "repeat": "R1",
+      "condition": "P0",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 24
+    },
+    {
+      "trial_id": "E4-H02-R2-P0",
+      "phase": "E4",
+      "asset_slot": "H02",
+      "repeat": "R2",
+      "condition": "P0",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 25
+    },
+    {
+      "trial_id": "E4-H02-R2-P1",
+      "phase": "E4",
+      "asset_slot": "H02",
+      "repeat": "R2",
+      "condition": "P1",
+      "max_creative_passes": 2,
+      "shared_parent_selector": "fresh_start",
+      "resolved_parent_sha256": null,
+      "status": "not_started",
+      "blind_evaluation_id": null,
+      "scheduled_order": 26
+    }
+  ],
+  "benchmark_direction": "Owner selected exactly Joriel Vase and Ziven Bowl in Blue for D01/D02; no third commercial product. Image freezing and execution intake remain pending.",
+  "calibration_asset_slots": [
+    {
+      "id": "C01",
+      "kind": "synthetic",
+      "purpose": "known vessel/relief measurement controls",
+      "selection": null
+    },
+    {
+      "id": "C02",
+      "kind": "synthetic",
+      "purpose": "known open-bowl/folded-relief measurement controls, including legitimate open surfaces",
+      "selection": null
+    }
+  ],
+  "qualification_endpoint": {
+    "real_product_development": "Prerecorded selected D01/D02 deliverables pass all applicable gates and receive explicit human geometry approval. These are tuned development results.",
+    "synthetic_transfer": "Every P1 E4 trace passes applicable gates, every planned P0/P1 trace accounted for, and no hidden protected regression.",
+    "unseen_real_product_transfer": "not_tested"
+  },
+  "required_logging": {
+    "contract": "LOGGING_CONTRACT.md",
+    "event_template": "EVENT_LEDGER_TEMPLATE.csv",
+    "learning_template": "LEARNING_LOG_TEMPLATE.md",
+    "append_only": true,
+    "every_attempt_including_failed_discarded_cancelled": true,
+    "breakdown_dimensions": [
+      "product",
+      "phase",
+      "trial",
+      "revision",
+      "role"
+    ],
+    "shared_overhead_bucket": true,
+    "usage_unknown_is_not_zero": true,
+    "raw_receipt_reconciliation_once": true,
+    "counter_reset_and_overlap_handling": true,
+    "end_of_campaign_learning_report_required": true
+  }
+}

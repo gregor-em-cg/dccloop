@@ -77,6 +77,7 @@ The lightweight GitHub workflow checks frozen inputs and portable geometry predi
 
 ## Design and contribution entry points
 
+- [Next-agent geometry experiment commission](docs/experiments/geometry-v1/COMMISSION.md) — Joriel/Ziven geometry trials, acceptance rubric, complete revision/usage/learning logs and execution intake; no modeling runs started. [repo docs/experiments/geometry-v1/EXPERIMENT_PLAN.json:1]
 - [Architecture and authority](docs/design.md)
 - [Model-provider and DCC adapter contracts](docs/adapter-contract.md)
 - [Reusable materials and controlled variants](docs/materials.md)

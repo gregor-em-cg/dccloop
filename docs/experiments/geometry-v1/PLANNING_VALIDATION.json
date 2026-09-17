@@ -1,0 +1,205 @@
+{
+  "schema_version": "geometry-planning-validation/1",
+  "observed_utc": "2026-09-17T05:13:28.349478+00:00",
+  "scope": "Static commission checks only; no modeling, Blender, provider calls, runtime logging implementation or live campaign tests.",
+  "checks": [
+    {
+      "check": "Exact independently enumerated 26-trial matrix",
+      "status": "pass"
+    },
+    {
+      "check": "34-pass bound and phase limits",
+      "status": "pass"
+    },
+    {
+      "check": "Product URLs match owner selections",
+      "status": "pass"
+    },
+    {
+      "check": "No third real product; exactly two synthetic holdouts",
+      "status": "pass"
+    },
+    {
+      "check": "No manufactured execution authority",
+      "status": "pass"
+    },
+    {
+      "check": "Approvals and unfilled reference packets preserved",
+      "status": "pass"
+    },
+    {
+      "check": "Every trial unstarted",
+      "status": "pass"
+    },
+    {
+      "check": "TRIAL_MATRIX.csv matches planned IDs",
+      "status": "pass"
+    },
+    {
+      "check": "TRIAL_MATRIX.csv has no started trial",
+      "status": "pass"
+    },
+    {
+      "check": "RESULTS_TEMPLATE.csv matches planned IDs",
+      "status": "pass"
+    },
+    {
+      "check": "RESULTS_TEMPLATE.csv has no started trial",
+      "status": "pass"
+    },
+    {
+      "check": "Results contain no fabricated usage or time",
+      "status": "pass"
+    },
+    {
+      "check": "Event ledger blank and includes usage/time identity fields",
+      "status": "pass"
+    },
+    {
+      "check": "Budget arithmetic",
+      "status": "pass"
+    },
+    {
+      "check": "Local Markdown targets exist",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in EXPERIMENT_PLAN.json",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in LEARNING_LOG_TEMPLATE.md",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in LOGGING_CONTRACT.md",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in AGENT_PROMPT.md",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in EVENT_LEDGER_TEMPLATE.csv",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in COMMISSION.md",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in SELECTED_PRODUCTS.md",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in RUN_APPROVAL_TEMPLATE.json",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in RESULTS_TEMPLATE.csv",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in GEOMETRY_RUBRIC.md",
+      "status": "pass"
+    },
+    {
+      "check": "No obsolete third-product/count wording in TRIAL_MATRIX.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename EXPERIMENT_PLAN.json",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename LEARNING_LOG_TEMPLATE.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename LOGGING_CONTRACT.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename AGENT_PROMPT.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename EVENT_LEDGER_TEMPLATE.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename COMMISSION.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename SELECTED_PRODUCTS.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename RUN_APPROVAL_TEMPLATE.json",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename PLANNING_CHANGELOG.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename RESULTS_TEMPLATE.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename GEOMETRY_RUBRIC.md",
+      "status": "pass"
+    },
+    {
+      "check": "Case-safe filename TRIAL_MATRIX.csv",
+      "status": "pass"
+    },
+    {
+      "check": "Independent matrix validator accepts intended matrix",
+      "status": "pass"
+    },
+    {
+      "check": "Same validator rejects an omitted trial",
+      "status": "pass"
+    },
+    {
+      "check": "Same validator rejects duplicate ID replacing another trial",
+      "status": "pass"
+    },
+    {
+      "check": "Same validator rejects increased per-trial creative allowance",
+      "status": "pass"
+    }
+  ],
+  "checks_passed": 42,
+  "checks_failed": 0,
+  "native_modeling_executed": false,
+  "runtime_logging_checks": "not_executed; specified for future campaign",
+  "trial_rows": 26,
+  "max_creative_passes": 34,
+  "source_hashes": {
+    "docs/experiments/geometry-v1/AGENT_PROMPT.md": "faef2096414e877c6d1ebeda5dd405297c117142f52560fe54d858ba42087ad8",
+    "docs/experiments/geometry-v1/COMMISSION.md": "8d1a1e3a27ae6f056ac1a4a9a6a68f029a3d376024e30c65ae7b73fd2828ed33",
+    "docs/experiments/geometry-v1/EVENT_LEDGER_TEMPLATE.csv": "ca666feaeea1dfbcac98c6ba8c82c067d22baefc2d61fb039feaa6a6f6382013",
+    "docs/experiments/geometry-v1/EXPERIMENT_PLAN.json": "fda03d26bd61f7349109d30a7d2a980a194af96687a66ec7efbf9120865f9463",
+    "docs/experiments/geometry-v1/GEOMETRY_RUBRIC.md": "0b8b87bc3d7db45f9d2f914b8c48494868170f3122f36488f101636fa1959516",
+    "docs/experiments/geometry-v1/LEARNING_LOG_TEMPLATE.md": "62a036dd907b1d6563e207b31338d8565e52f973d0c8e0979e932299db764933",
+    "docs/experiments/geometry-v1/LOGGING_CONTRACT.md": "df5accdc8ee993281a0221c81dbc611cba69689ed36e1436c1f22b0bdf0572db",
+    "docs/experiments/geometry-v1/PLANNING_CHANGELOG.md": "b88ae751d32487079035241fbc0605c49a31f34db2d89c1ecb7493c70eaff088",
+    "docs/experiments/geometry-v1/RESULTS_TEMPLATE.csv": "6381ddfd3d12a5217dc8370014465de4243034b4eccd8ea1e9341d641c48dd11",
+    "docs/experiments/geometry-v1/RUN_APPROVAL_TEMPLATE.json": "e044ed9e649ef174553e2864263c598928e94e240032ea32a2d81ae306ae7511",
+    "docs/experiments/geometry-v1/SELECTED_PRODUCTS.md": "7e945049b7a5cdf6f51b9e666d3ee80b49ec040e4b7bc09fb68a0c100f73d2cf",
+    "docs/experiments/geometry-v1/TRIAL_MATRIX.csv": "0bf5c10b5b7e68f9fa04e0f5160f48412b304c7c72535cf68c34a7253653a000"
+  },
+  "negative_control_method": "Ran the same independent expected-matrix validator against the actual plan, a missing-trial copy, an equal-length duplicated-ID copy and a changed-pass-cap copy; only the actual plan was accepted. In-memory corruptions only.",
+  "review_note": "Read-only independent review found and resolved third-product endpoint, interval provenance, shared synthetic accounting, logging freeze and idempotent retry accounting issues. No runtime logging implementation was tested.",
+  "verification_history": [
+    {
+      "check": "staged whitespace validation",
+      "initial": "failed: CSV CRLF endings flagged as trailing whitespace",
+      "repair": "normalized three CSV files to LF; parsed cell values unchanged",
+      "retest": "pass: git diff --cached --check exit 0"
+    }
+  ]
+}

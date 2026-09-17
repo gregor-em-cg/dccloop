@@ -24,6 +24,10 @@ All stage entries are proposals. A failed dependency can return work to an earli
 
 ## First concrete experiment
 
+The current near-term proposal is the [geometry-only experiment campaign](experiments/geometry-v1/COMMISSION.md): compare construction and feedback methods on the selected Joriel Vase and Ziven Bowl, then optimize and test a frozen process on two unseen synthetic geometries. It precedes material-library and cross-DCC work; product selection is complete, while reference freezing and run authorization/settings remain pending. The phase matrix proposes 26 trials with at most 34 creative passes, released in bounded stages rather than assumed to run at once. [repo docs/experiments/geometry-v1/EXPERIMENT_PLAN.json:1] [ESTIMATE]
+
+The following cross-DCC experiment remains downstream of that geometry milestone. [ESTIMATE]
+
 After review and explicit native-execution authorization, use one selected simple asset plus a representative target scene. Freeze input references, expected identities, allowed approximations, target versions, material choice, output scope, and finite budgets before dispatch. Preserve the starting asset and use disposable outputs. [ESTIMATE]
 
 Exercise a valid transfer, a deliberately missing texture, a units mismatch, and a naming collision. Verify that each negative control fails at the intended gate, then restore the valid package and show the positive control succeeds. Obtain a human decision separately from automated pass/fail results. [ESTIMATE]

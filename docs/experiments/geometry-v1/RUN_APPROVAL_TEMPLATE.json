@@ -1,0 +1,58 @@
+{
+  "schema_version": "geometry-campaign-approval/1",
+  "status": "products-selected-execution-record-not-approved",
+  "execution_authorized": false,
+  "approved_by": null,
+  "authority_evidence_ref": null,
+  "approved_utc": null,
+  "authorized_phases": [],
+  "repository_commit": null,
+  "experiment_plan_sha256": null,
+  "geometry_rubric_sha256": null,
+  "asset_selections": [],
+  "public_asset_sharing_authorized": false,
+  "public_sharing_scope": [],
+  "builder_model_and_settings": null,
+  "advisory_reviewer_model_and_settings": null,
+  "final_evaluator_and_human_authority": null,
+  "paid_calls_authorized": false,
+  "installed_dcc_and_version": null,
+  "machine_profile": null,
+  "trusted_execution_boundary": null,
+  "protected_originals": [],
+  "private_campaign_root": null,
+  "approved_finite_limits": null,
+  "frozen_asset_profile_refs": [],
+  "evaluation_custody_and_access_record": null,
+  "authorized_experiment_harness_changes": [],
+  "scope_note": "Execution may proceed without per-command approval only within explicitly authorized phases, selected inputs, trusted capabilities and finite limits. An agent may not self-approve this template.",
+  "selected_products": [
+    {
+      "asset_slot": "D01",
+      "product": "Joriel Vase",
+      "sku": "220121",
+      "url": "https://www.edwardmartin.com/products/joriel-vase",
+      "published_dimensions_in": {
+        "width": 14,
+        "depth": 14,
+        "height": 14
+      }
+    },
+    {
+      "asset_slot": "D02",
+      "product": "Ziven Bowl in Blue",
+      "sku": "220106",
+      "url": "https://www.edwardmartin.com/products/ziven-bowl-in-blue",
+      "published_dimensions_in": {
+        "width": 14,
+        "depth": 14,
+        "height": 6.25
+      }
+    }
+  ],
+  "two_products_explicitly_selected_by_owner": true,
+  "frozen_reference_packets": [],
+  "reference_packets_frozen": false,
+  "logging_contract_sha256": null,
+  "logging_template_hashes": null
+}
